@@ -633,17 +633,24 @@ function scrollToCart(){
     });
 
 }
-function toggleSummary(){
+function toggleFooterSummary(){
 
-    const content = document.getElementById("summaryContent");
-    const arrow = document.getElementById("summaryArrow");
+    const box =
+        document.getElementById("footerSummary");
 
-    content.classList.toggle("hide");
+    const arrow =
+        document.querySelector(".footer-arrow");
 
-    if(content.classList.contains("hide")){
-        arrow.innerHTML = "▼";
+    box.classList.toggle("hidden");
+
+    if(box.classList.contains("hidden")){
+
+        arrow.innerHTML="▼";
+
     }else{
-        arrow.innerHTML = "▲";
+
+        arrow.innerHTML="▲";
+
     }
 
 }
