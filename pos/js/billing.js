@@ -236,15 +236,16 @@ const cartHeader = document.getElementById("cartHeader");
 
     cartBody.innerHTML = "";
 
-    document.getElementById("totalQty").innerText = 0;
-    document.getElementById("grandTotal").innerText = 0;
-    document.getElementById("subTotal").innerText = 0;
-    document.getElementById("paymentGrandTotal").innerText = 0;
-    document.getElementById("itemCount").innerText = 0;
-    document.getElementById("summaryTotal").innerText = 0;
-    document.getElementById("checkoutAmount").innerText = 0;
-    document.querySelector(".checkout-btn").disabled = true;
+    document.getElementById("footerItems").innerText = 0;
+document.getElementById("footerQty").innerText = 0;
+document.getElementById("footerAmount").innerText = 0;
 
+document.getElementById("subTotal").innerText = 0;
+document.getElementById("grandTotal").innerText = 0;
+document.getElementById("paymentGrandTotal").innerText = 0;
+
+document.getElementById("checkoutAmount").innerText = 0;
+        
    updateGoCartBar();
     return;
 
