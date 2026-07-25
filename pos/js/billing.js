@@ -513,11 +513,18 @@ function closeCamera(){
     .catch(console.error);
 
 }
-function showScanToast(text){
+function showScanToast(product,size){
 
     const toast = document.getElementById("scanToast");
 
-    toast.innerHTML = "✅ " + text;
+    document.getElementById("toastImage").src =
+        product.primaryImage;
+
+    document.getElementById("toastName").innerHTML =
+        product.name;
+
+    document.getElementById("toastSize").innerHTML =
+        "Size : " + size.size;
 
     toast.classList.remove("hidden");
 
