@@ -284,30 +284,6 @@ overflow-x:hidden;
     padding:8px 0;
     font-size:15px;
 }
-
-.grand-total{
-
-display:flex;
-
-justify-content:space-between;
-
-align-items:center;
-
-padding:16px 0;
-
-margin-top:15px;
-
-border-top:1px dashed #ddd;
-
-font-size:18px;
-
-font-weight:bold;
-
-background:none;
-
-color:#222;
-
-}
 .checkout-btn{
 width:100%;
  display:none;
