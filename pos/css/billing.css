@@ -963,6 +963,9 @@ background:#0f6d59;
     position:static;
 
 }
+    .checkout-btn{
+    display:flex;
+}
 .right-panel{
 
     display:none;
