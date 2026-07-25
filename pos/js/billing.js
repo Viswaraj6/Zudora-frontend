@@ -302,6 +302,9 @@ cartHeader.classList.remove("hidden");
     document.getElementById("subTotal").innerText = grandTotal;
     document.getElementById("paymentGrandTotal").innerText = grandTotal;
     document.getElementById("itemCount").innerText = cart.length;
+    document.getElementById("summaryTotal").innerText = grandTotal;
+
+document.getElementById("checkoutAmount").innerText = grandTotal;
 }
 function openSearch(list){
 
