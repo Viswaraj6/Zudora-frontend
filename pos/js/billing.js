@@ -226,7 +226,20 @@ updateGoCartBar();
 function renderCart(){
 
     const cartBody = document.querySelector(".cart-body");
+    const emptyCart = document.getElementById("emptyCart");
+const cartHeader = document.getElementById("cartHeader");
 
+if (cart.length === 0) {
+
+    emptyCart.classList.remove("hidden");
+    cartHeader.classList.add("hidden");
+
+} else {
+
+    emptyCart.classList.add("hidden");
+    cartHeader.classList.remove("hidden");
+
+}
     cartBody.innerHTML = "";
 
     let grandTotal = 0;
