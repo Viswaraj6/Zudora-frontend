@@ -611,12 +611,14 @@ function toggleSidebar(){
 }
 function scrollToCart(){
 
-    document.querySelector(".left-panel")
-        .scrollIntoView({
+    // Camera open இருந்தா close பண்ணு
+    closeCamera();
 
-            behavior:"smooth"
-
-        });
+    // Cart Summary-க்கு scroll பண்ணு
+    document.getElementById("cartSummary").scrollIntoView({
+        behavior: "smooth",
+        block: "start"
+    });
 
 }
 function toggleSummary(){
