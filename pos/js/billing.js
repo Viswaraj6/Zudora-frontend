@@ -216,7 +216,12 @@ function addToCart(product,size){
     console.log(cart);
 console.log(product);
 console.log(size);
+
+renderCart();
+
 showScanToast(product,size);
+
+updateGoCartBar();
 }
 function renderCart(){
 
