@@ -241,6 +241,8 @@ const cartHeader = document.getElementById("cartHeader");
     document.getElementById("subTotal").innerText = 0;
     document.getElementById("paymentGrandTotal").innerText = 0;
     document.getElementById("itemCount").innerText = 0;
+    document.getElementById("summaryTotal").innerText = 0;
+    document.getElementById("checkoutAmount").innerText = 0;
 
     return;
 
