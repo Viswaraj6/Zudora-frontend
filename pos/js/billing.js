@@ -584,3 +584,13 @@ function toggleSidebar(){
     overlay.classList.toggle("show");
 
 }
+function scrollToCart(){
+
+    document.querySelector(".left-panel")
+        .scrollIntoView({
+
+            behavior:"smooth"
+
+        });
+
+}
