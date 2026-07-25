@@ -627,7 +627,7 @@ function scrollToCart(){
     closeCamera();
 
     // Cart Summary-க்கு scroll பண்ணு
-    document.getElementById("cartSummary").scrollIntoView({
+    document.getElementById("cartFooter").scrollIntoView({
         behavior: "smooth",
         block: "start"
     });
