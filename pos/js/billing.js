@@ -229,12 +229,6 @@ function renderCart(){
     const emptyCart = document.getElementById("emptyCart");
 const cartHeader = document.getElementById("cartHeader");
 
-if (cart.length === 0) {
-
-    emptyCart.classList.remove("hidden");
-    cartHeader.classList.add("hidden");
-
-}
     if (cart.length === 0) {
 
     emptyCart.classList.remove("hidden");
@@ -252,6 +246,8 @@ if (cart.length === 0) {
 
 }
     cartBody.innerHTML = "";
+    emptyCart.classList.add("hidden");
+cartHeader.classList.remove("hidden");
 
     let grandTotal = 0;
     let totalQty = 0;
