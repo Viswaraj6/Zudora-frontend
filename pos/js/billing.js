@@ -425,7 +425,7 @@ function changeQty(index,value){
     }
 
     renderCart();
-
+updateGoCartBar();
 }
 
 function removeItem(index){
