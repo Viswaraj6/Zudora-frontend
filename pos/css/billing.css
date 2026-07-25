@@ -281,23 +281,6 @@ overflow-x:hidden;
     box-shadow:0 -3px 10px rgba(0,0,0,.08);
 
 }
-
-.summary-top{
-    display:flex;
-    justify-content:space-between;
-    align-items:center;
-    margin-bottom:15px;
-}
-
-.clear-btn{
-    border:1px solid #ff4d4f;
-    background:#fff;
-    color:#ff4d4f;
-    padding:6px 12px;
-    border-radius:6px;
-    cursor:pointer;
-}
-
 .summary-row{
     display:flex;
     justify-content:space-between;
