@@ -268,11 +268,12 @@ cartHeader.classList.remove("hidden");
 
 <div class="swipe-item">
 
-    <div class="swipe-delete">
+   <div class="swipe-delete"
+     onclick="removeItem(${index})">
 
-        🗑 Remove
+    🗑 Remove
 
-    </div>
+</div>
 
     <div class="cart-item">
 
