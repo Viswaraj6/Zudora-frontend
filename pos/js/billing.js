@@ -125,34 +125,36 @@ function barcodeScan(e){
 
     if(e.key !== "Enter") return;
 
-    const barcode = e.target.value.trim();
+    const barcode = String(e.target.value).trim();
 
-    if(barcode==="") return;
+    console.log("Scanned Barcode :", barcode);
+
+    console.log("Products Loaded :", allProducts.length);
 
     const product = allProducts.find(p =>
-
-        p.sizeStock.some(s => s.sku === barcode)
-
+        (p.sizeStock || []).some(s =>
+            String(s.sku).trim() === barcode
+        )
     );
 
+    console.log("Matched Product :", product);
+
     if(!product){
-
-        e.target.value="";
-
+        alert("Product Not Found : " + barcode);
         return;
-
     }
 
-    const size = product.sizeStock.find(s => s.sku===barcode);
+    const size = product.sizeStock.find(s =>
+        String(s.sku).trim() === barcode
+    );
 
-    console.log(product);
-
-    console.log(size);
+    console.log("Matched Size :", size);
 
     addToCart(product,size);
-    closeSearch();
-    e.target.value="";
 
+    closeSearch();
+
+    e.target.value="";
 }
 function addToCart(product,size){
 
