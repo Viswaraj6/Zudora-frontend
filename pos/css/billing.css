@@ -282,9 +282,7 @@ overflow-x:hidden;
     border-bottom:1px solid #ddd;
 
     font-weight:bold;
-    position:sticky;
-    bottom:0;
-    z-index:20;
+
 }
 
 .footer-arrow{
