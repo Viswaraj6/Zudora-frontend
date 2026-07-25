@@ -513,27 +513,35 @@ function closeCamera(){
     .catch(console.error);
 
 }
-function showScanToast(product,size){
+function showScanToast(product, size){
+
+    console.log("Toast Called");
 
     const toast = document.getElementById("scanToast");
 
+    if(!toast){
+        console.log("scanToast Not Found");
+        return;
+    }
+
     document.getElementById("toastImage").src =
-        product.primaryImage;
+        product.primaryImage || "";
 
-    document.getElementById("toastName").innerHTML =
-        product.name;
+    document.getElementById("toastName").textContent =
+        product.name || "";
 
-    document.getElementById("toastSize").innerHTML =
-        "Size : " + size.size;
+    document.getElementById("toastSize").textContent =
+        "Size : " + (size.size || "");
 
     toast.classList.remove("hidden");
 
-    document.getElementById("beepSound").play();
+    const beep = document.getElementById("beepSound");
+    if(beep) beep.play().catch(()=>{});
 
-    setTimeout(()=>{
+    clearTimeout(window.toastTimer);
 
+    window.toastTimer = setTimeout(()=>{
         toast.classList.add("hidden");
-
     },1500);
 
 }
