@@ -352,6 +352,41 @@ background:none;
 color:#222;
 
 }
+.checkout-btn{
+
+width:100%;
+
+height:62px;
+
+border:none;
+
+background:#14866d;
+
+color:#fff;
+
+display:flex;
+
+justify-content:space-between;
+
+align-items:center;
+
+padding:0 22px;
+
+font-size:18px;
+
+font-weight:600;
+
+cursor:pointer;
+
+transition:.25s;
+
+}
+
+.checkout-btn:hover{
+
+background:#0f6d59;
+
+}
 .cart-item small{
 
     color:#777;
