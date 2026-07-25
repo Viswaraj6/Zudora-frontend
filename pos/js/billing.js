@@ -243,7 +243,9 @@ const cartHeader = document.getElementById("cartHeader");
     document.getElementById("itemCount").innerText = 0;
     document.getElementById("summaryTotal").innerText = 0;
     document.getElementById("checkoutAmount").innerText = 0;
+    document.querySelector(".checkout-btn").disabled = true;
 
+   updateGoCartBar();
     return;
 
 }
