@@ -985,6 +985,23 @@ background:#0f6d59;
     position:static;
 
 }
+    .cart-footer{
+
+        grid-template-columns:
+            45px
+            2fr
+            60px
+            70px
+            70px
+            100px;
+
+        font-size:14px;
+    }
+
+    .cart-footer strong{
+
+        white-space:nowrap;
+    }
     .checkout-btn{
     display:flex;
 }
