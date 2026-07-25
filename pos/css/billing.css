@@ -1020,7 +1020,13 @@ background:#0f6d59;
     border-radius:8px;
 
 }
+.search-box input{
 
+    height:44px;
+
+    font-size:15px;
+
+}
     .billing-layout{
 
         display:flex;
