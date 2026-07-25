@@ -240,6 +240,22 @@ if (cart.length === 0) {
     cartHeader.classList.remove("hidden");
 
 }
+    if (cart.length === 0) {
+
+    emptyCart.classList.remove("hidden");
+    cartHeader.classList.add("hidden");
+
+    cartBody.innerHTML = "";
+
+    document.getElementById("totalQty").innerText = 0;
+    document.getElementById("grandTotal").innerText = 0;
+    document.getElementById("subTotal").innerText = 0;
+    document.getElementById("paymentGrandTotal").innerText = 0;
+    document.getElementById("itemCount").innerText = 0;
+
+    return;
+
+}
     cartBody.innerHTML = "";
 
     let grandTotal = 0;
