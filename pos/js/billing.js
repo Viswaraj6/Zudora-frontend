@@ -127,34 +127,59 @@ function barcodeScan(e){
 
     const barcode = String(e.target.value).trim();
 
-    console.log("Scanned Barcode :", barcode);
+    if(!barcode) return;
 
-    console.log("Products Loaded :", allProducts.length);
+    // Last digit = Size
+    const sizeCode = barcode.slice(-1);
+
+    // Remaining digits = Style No
+    const styleNo = barcode.slice(0, -1);
+
+    const shirtMap = {
+        "1":"S",
+        "2":"M",
+        "3":"L",
+        "4":"XL",
+        "5":"XXL"
+    };
+
+    const pantMap = {
+        "1":"30",
+        "2":"32",
+        "3":"34",
+        "4":"36",
+        "5":"38",
+        "6":"40"
+    };
 
     const product = allProducts.find(p =>
-        (p.sizeStock || []).some(s =>
-            String(s.sku).trim() === barcode
-        )
+        String(p.styleNo) === styleNo
     );
 
-    console.log("Matched Product :", product);
-
     if(!product){
-        alert("Product Not Found : " + barcode);
+        alert("Product Not Found");
         return;
     }
 
+    const sizeMap =
+        product.type === "pant"
+            ? pantMap
+            : shirtMap;
+
     const size = product.sizeStock.find(s =>
-        String(s.sku).trim() === barcode
+        s.size === sizeMap[sizeCode]
     );
 
-    console.log("Matched Size :", size);
+    if(!size){
+        alert("Size Not Found");
+        return;
+    }
 
-    addToCart(product,size);
+    addToCart(product, size);
 
     closeSearch();
 
-    e.target.value="";
+    e.target.value = "";
 }
 function addToCart(product,size){
 
