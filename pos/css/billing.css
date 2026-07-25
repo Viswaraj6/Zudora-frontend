@@ -1293,3 +1293,44 @@ transform:translate(-50%,0);
     }
 
 }
+.go-cart{
+
+position:fixed;
+
+left:20px;
+
+right:20px;
+
+bottom:20px;
+
+height:58px;
+
+background:#14866d;
+
+color:#fff;
+
+display:flex;
+
+justify-content:space-between;
+
+align-items:center;
+
+padding:0 18px;
+
+border-radius:14px;
+
+font-weight:bold;
+
+box-shadow:0 8px 20px rgba(0,0,0,.25);
+
+cursor:pointer;
+
+z-index:999999;
+
+}
+
+.hidden{
+
+display:none !important;
+
+}
