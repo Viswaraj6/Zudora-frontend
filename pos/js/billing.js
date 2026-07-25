@@ -30,6 +30,7 @@ async function loadProducts() {
        allProducts = await res.json();
 
 console.log(allProducts);
+        renderProducts();
 console.log(allProducts[0]);
 
 
