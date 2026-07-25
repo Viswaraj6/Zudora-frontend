@@ -985,29 +985,95 @@ overflow-x:hidden;
 }
 .scan-toast{
 
-    position:fixed;
+position:fixed;
 
-    bottom:25px;
+bottom:20px;
 
-    left:50%;
+left:50%;
 
-    transform:translateX(-50%);
+transform:translateX(-50%);
 
-    background:#16a085;
+width:340px;
 
-    color:#fff;
+background:#fff;
 
-    padding:14px 22px;
+border-radius:12px;
 
-    border-radius:10px;
+padding:12px;
 
-    font-size:16px;
+display:flex;
 
-    font-weight:bold;
+align-items:center;
 
-    z-index:30000;
+gap:12px;
 
-    box-shadow:0 5px 15px rgba(0,0,0,.2);
+box-shadow:0 10px 25px rgba(0,0,0,.25);
+
+z-index:50000;
+
+animation:toastIn .25s;
+
+}
+
+.scan-toast img{
+
+width:55px;
+
+height:70px;
+
+object-fit:cover;
+
+border-radius:8px;
+
+}
+
+.toast-info{
+
+flex:1;
+
+}
+
+.toast-info h4{
+
+font-size:16px;
+
+margin-bottom:4px;
+
+}
+
+.toast-info small{
+
+color:#666;
+
+}
+
+.toast-check{
+
+font-size:26px;
+
+color:#16a085;
+
+font-weight:bold;
+
+}
+
+@keyframes toastIn{
+
+from{
+
+opacity:0;
+
+transform:translate(-50%,20px);
+
+}
+
+to{
+
+opacity:1;
+
+transform:translate(-50%,0);
+
+}
 
 }
 /* ---------- Sidebar ---------- */
