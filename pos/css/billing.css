@@ -355,7 +355,7 @@ color:#222;
 }
 .checkout-btn{
 width:100%;
-
+ display:none;
 height:62px;
 
 border:none;
