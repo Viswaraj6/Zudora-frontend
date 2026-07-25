@@ -300,14 +300,20 @@ cartHeader.classList.remove("hidden");
 `;
     });
 
-    document.getElementById("totalQty").innerText = totalQty;
-    document.getElementById("grandTotal").innerText = grandTotal;
-    document.getElementById("subTotal").innerText = grandTotal;
-    document.getElementById("paymentGrandTotal").innerText = grandTotal;
-    document.getElementById("itemCount").innerText = cart.length;
-    document.getElementById("summaryTotal").innerText = grandTotal;
-    document.getElementById("checkoutAmount").innerText = grandTotal;
-    document.querySelector(".checkout-btn").disabled = false;
+    document.getElementById("footerItems").innerText = cart.length;
+
+document.getElementById("footerQty").innerText = totalQty;
+
+document.getElementById("footerAmount").innerText = grandTotal;
+
+document.getElementById("subTotal").innerText = grandTotal;
+
+document.getElementById("grandTotal").innerText = grandTotal;
+
+document.getElementById("paymentGrandTotal").innerText = grandTotal;
+
+document.getElementById("checkoutAmount").innerText = grandTotal;
+    
 }
 function openSearch(list){
 
