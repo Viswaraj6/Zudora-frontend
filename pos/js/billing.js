@@ -43,7 +43,7 @@ console.log(allProducts[0].sizeStock);
 function renderProducts(){
 
     const grid = document.getElementById("productGrid");
-
+    if (!grid) return;
     grid.innerHTML = "";
 
     const start = (currentPage - 1) * PRODUCTS_PER_PAGE;
