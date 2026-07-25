@@ -327,6 +327,23 @@
             <h3>Scan Barcode</h3>
 
             <button id="flashBtn">🔦</button>
+<div id="scanToast" class="scan-toast hidden">
+
+    <img id="toastImage">
+
+    <div class="toast-info">
+
+        <h4 id="toastName"></h4>
+
+        <small id="toastSize"></small>
+
+    </div>
+
+    <div class="toast-check">
+        ✓
+    </div>
+
+</div>
 
         </div>
 
@@ -344,24 +361,7 @@
     </div>
 
 </div>
-   <div id="scanToast" class="scan-toast hidden">
-
-    <img id="toastImage">
-
-    <div class="toast-info">
-
-        <h4 id="toastName"></h4>
-
-        <small id="toastSize"></small>
-
-    </div>
-
-    <div class="toast-check">
-        ✓
-    </div>
-
-</div>
-    
+       
 </main>
      </div>
 <script src="https://unpkg.com/html5-qrcode@2.3.8/html5-qrcode.min.js"></script>
