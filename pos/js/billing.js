@@ -538,6 +538,9 @@ function closeCamera(){
         document
             .getElementById("cameraPopup")
             .classList.add("hidden");
+        document
+    .getElementById("goCartBar")
+    .classList.add("hidden");
 
     })
 
