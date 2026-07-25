@@ -304,14 +304,25 @@ overflow-x:hidden;
 
 .footer-summary{
 
+    position:absolute;
+
+    left:0;
+
+    right:0;
+
+    bottom:58px;
+
     background:#fff;
 
-    border-bottom:1px solid #ddd;
+    border-top:1px solid #ddd;
+
+    box-shadow:0 -5px 15px rgba(0,0,0,.12);
 
     padding:18px 20px;
-   
-}
 
+    z-index:19;
+
+}
 .footer-summary.hidden{
 
     display:none;
