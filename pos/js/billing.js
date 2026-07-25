@@ -576,19 +576,25 @@ function showScanToast(product, size){
 function updateGoCartBar(){
 
     const bar = document.getElementById("goCartBar");
+    const cameraPopup = document.getElementById("cameraPopup");
 
-    if(cart.length===0){
-
+    // Camera close இருந்தா Go To Cart காட்டக்கூடாது
+    if(cameraPopup.classList.contains("hidden")){
         bar.classList.add("hidden");
         return;
-
     }
 
+    // Cart empty இருந்தாலும் hide
+    if(cart.length === 0){
+        bar.classList.add("hidden");
+        return;
+    }
+
+    // Camera open + Cart has items
     bar.classList.remove("hidden");
 
-    const qty = cart.reduce((t,item)=>t+item.qty,0);
-
-    const total = cart.reduce((t,item)=>t+(item.qty*item.price),0);
+    const qty = cart.reduce((t,item)=>t + item.qty,0);
+    const total = cart.reduce((t,item)=>t + (item.qty * item.price),0);
 
     document.getElementById("goCartItems").innerText =
         cart.length + " Items";
@@ -598,7 +604,6 @@ function updateGoCartBar(){
 
     document.getElementById("goCartTotal").innerText =
         total;
-
 }
 function toggleSidebar(){
 
