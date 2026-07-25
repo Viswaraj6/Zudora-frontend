@@ -214,10 +214,8 @@ function addToCart(product,size){
     }
 
     console.log(cart);
-
-   
-renderCart();
-
+console.log(product);
+console.log(size);
 showScanToast(product,size);
 }
 function renderCart(){
