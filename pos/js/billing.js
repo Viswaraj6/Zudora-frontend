@@ -433,6 +433,7 @@ function removeItem(index){
     cart.splice(index,1);
 
     renderCart();
+ updateGoCartBar();
 
 }
 function openCamera(){
