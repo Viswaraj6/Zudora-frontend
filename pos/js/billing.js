@@ -548,6 +548,33 @@ function showScanToast(product, size){
     },1500);
 
 }
+function updateGoCartBar(){
+
+    const bar = document.getElementById("goCartBar");
+
+    if(cart.length===0){
+
+        bar.classList.add("hidden");
+        return;
+
+    }
+
+    bar.classList.remove("hidden");
+
+    const qty = cart.reduce((t,item)=>t+item.qty,0);
+
+    const total = cart.reduce((t,item)=>t+(item.qty*item.price),0);
+
+    document.getElementById("goCartItems").innerText =
+        cart.length + " Items";
+
+    document.getElementById("goCartQty").innerText =
+        qty + " Qty";
+
+    document.getElementById("goCartTotal").innerText =
+        total;
+
+}
 function toggleSidebar(){
 
     const sidebar = document.getElementById("sidebar");
