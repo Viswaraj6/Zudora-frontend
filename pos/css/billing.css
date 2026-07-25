@@ -1334,3 +1334,76 @@ z-index:999999;
 display:none !important;
 
 }
+/* Empty Cart */
+
+.empty-cart{
+
+    height:100%;
+
+    display:flex;
+
+    flex-direction:column;
+
+    justify-content:center;
+
+    align-items:center;
+
+    text-align:center;
+
+    padding:40px;
+
+}
+
+.empty-cart-icon{
+
+    font-size:70px;
+
+    margin-bottom:20px;
+
+}
+
+.empty-cart h3{
+
+    font-size:24px;
+
+    color:#333;
+
+    margin-bottom:10px;
+
+}
+
+.empty-cart p{
+
+    color:#777;
+
+    margin-bottom:25px;
+
+    line-height:1.5;
+
+}
+
+.scan-btn{
+
+    background:#16a085;
+
+    color:#fff;
+
+    border:none;
+
+    padding:14px 28px;
+
+    border-radius:10px;
+
+    font-size:16px;
+
+    cursor:pointer;
+
+    font-weight:bold;
+
+}
+
+.scan-btn:hover{
+
+    background:#14866d;
+
+}
