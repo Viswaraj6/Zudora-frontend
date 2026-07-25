@@ -1419,6 +1419,59 @@ display:none !important;
     background:#14866d;
 
 }
+/* Swipe Container */
+
+.swipe-item{
+
+    position:relative;
+
+    overflow:hidden;
+
+}
+
+/* Delete Background */
+
+.swipe-delete{
+
+    position:absolute;
+
+    top:0;
+
+    right:0;
+
+    bottom:0;
+
+    width:110px;
+
+    background:#e53935;
+
+    color:#fff;
+
+    display:flex;
+
+    align-items:center;
+
+    justify-content:center;
+
+    font-weight:bold;
+
+    z-index:1;
+
+}
+
+/* Cart Row */
+
+.swipe-item .cart-item{
+
+    position:relative;
+
+    background:#fff;
+
+    z-index:2;
+
+    transition:transform .25s;
+
+}
 /* ================= Mobile & Tablet ================= */
 
 @media (max-width:1024px){
