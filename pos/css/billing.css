@@ -172,6 +172,8 @@ overflow-x:hidden;
 }
 .left-panel{
 
+    position:relative;
+
     background:#fff;
 
     height:calc(100vh - 130px);
