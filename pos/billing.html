@@ -164,47 +164,77 @@
     </div>
  <div class="cart-body">
 </div>
-<div class="cart-summary" id="cartSummary">
+<div class="cart-footer" id="cartFooter">
 
-    <!-- Summary Header -->
-    <div class="summary-header" onclick="toggleSummary()">
+    <div></div>
 
-        <div>
-           🛒
-          <span id="itemCount">0</span> Items |
-          <span id="totalQty">0</span> Qty |
-          ₹<span id="summaryTotal">0</span>
-        </div>
+    <div>
+        <strong>Total Items :
+            <span id="footerItems">0</span>
+        </strong>
+    </div>
 
-        <span id="summaryArrow">▼</span>
+    <div></div>
+
+    <div>
+        <strong id="footerQty">0</strong>
+    </div>
+
+    <div></div>
+
+    <div>
+        <strong>
+            ₹<span id="footerAmount">0</span>
+        </strong>
+    </div>
+
+    <div
+        class="footer-arrow"
+        onclick="toggleFooterSummary()">
+
+        ▼
 
     </div>
 
-    <!-- Expand Area -->
-   <div id="summaryContent" class="summary-content hide">
+</div>
 
-        <div class="summary-row">
-            <span>Sub Total</span>
-            <span>₹<span id="subTotal">0</span></span>
-        </div>
+<div
+    id="footerSummaryContent"
+    class="footer-summary hide">
 
-        <div class="summary-row">
-            <span>Discount</span>
-            <span>₹0</span>
-        </div>
+    <div class="summary-row">
 
-        <div class="summary-row">
-            <span>Round Off</span>
-            <span>₹0</span>
-        </div>
+        <span>Sub Total</span>
 
-        <div class="grand-total">
-            <span>Grand Total</span>
-            <span>₹<span id="grandTotal">0</span></span>
-        </div>
+        <span>₹<span id="subTotal">0</span></span>
 
     </div>
 
+    <div class="summary-row">
+
+        <span>Discount</span>
+
+        <span>₹0</span>
+
+    </div>
+
+    <div class="summary-row">
+
+        <span>Round Off</span>
+
+        <span>₹0</span>
+
+    </div>
+
+    <div class="grand-total">
+
+        <span>Grand Total</span>
+
+        <span>₹<span id="grandTotal">0</span></span>
+
+    </div>
+
+</div>
     <!-- Checkout -->
     <button class="checkout-btn" onclick="openCheckout()">
 
