@@ -234,11 +234,6 @@ if (cart.length === 0) {
     emptyCart.classList.remove("hidden");
     cartHeader.classList.add("hidden");
 
-} else {
-
-    emptyCart.classList.add("hidden");
-    cartHeader.classList.remove("hidden");
-
 }
     if (cart.length === 0) {
 
