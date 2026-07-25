@@ -1419,3 +1419,32 @@ display:none !important;
     background:#14866d;
 
 }
+/* ================= Mobile & Tablet ================= */
+
+@media (max-width:1024px){
+
+    /* Hide Action column */
+
+    .cart-header div:nth-child(7),
+    .cart-item div:nth-child(7){
+
+        display:none;
+
+    }
+
+    /* 6 columns only */
+
+    .cart-header,
+    .cart-item{
+
+        grid-template-columns:
+            35px
+            2.5fr
+            55px
+            80px
+            80px
+            90px;
+
+    }
+
+}
