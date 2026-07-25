@@ -32,7 +32,7 @@ async function loadProducts() {
 console.log(allProducts);
         renderProducts();
 console.log(allProducts[0]);
-
+console.log(allProducts[0].sizeStock);
 
 
     } catch (err) {
