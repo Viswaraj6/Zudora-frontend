@@ -265,39 +265,6 @@ overflow-x:hidden;
     font-size:15px;
 
 }
-.cart-summary{
-
-    position:sticky;
-
-    bottom:0;
-
-    background:#fff;
-
-    border-top:1px solid #ddd;
-
-    z-index:15;
-
-    overflow:hidden;
-
-}
-.summary-header{
-
-    display:flex;
-
-    justify-content:space-between;
-
-    align-items:center;
-
-    padding:16px 20px;
-
-    cursor:pointer;
-
-    background:#fafafa;
-
-    font-weight:600;
-
-}
-
 .summary-title{
 
     font-size:15px;
@@ -309,18 +276,6 @@ overflow-x:hidden;
     font-size:18px;
 
     transition:.25s;
-
-}
-
-.summary-content{
-
-    padding:18px 20px;
-
-}
-
-.summary-content.hide{
-
-    display:none;
 
 }
 .summary-row{
