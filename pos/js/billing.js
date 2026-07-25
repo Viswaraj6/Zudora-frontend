@@ -22,7 +22,7 @@ window.onload = () => {
     document
         .getElementById("cameraBtn")
         .addEventListener("click", openCamera);
-
+renderCart();
 };
 async function loadProducts() {
     try {
