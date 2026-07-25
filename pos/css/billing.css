@@ -1010,6 +1010,19 @@ background:#0f6d59;
 
         white-space:nowrap;
     }
+    .cart-footer > div{
+
+    width:auto !important;
+
+}
+
+#footerItems,
+#footerQty,
+#footerAmount{
+
+    white-space:nowrap;
+
+}
     .checkout-btn{
     display:flex;
 }
