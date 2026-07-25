@@ -266,33 +266,48 @@ cartHeader.classList.remove("hidden");
 
         cartBody.innerHTML += `
 
-<div class="cart-item">
+<div class="swipe-item">
 
-    <div>${index+1}</div>
+    <div class="swipe-delete">
 
-    <div>
-        <strong>${item.product}</strong><br>
-        <small>${item.barcode}</small>
+        🗑 Remove
+
     </div>
 
-    <div>
-        ${item.size}
-    </div>
+    <div class="cart-item">
 
-    <div>
-        <button onclick="changeQty(${index},-1)">−</button>
+        <div>${index+1}</div>
 
-        <span style="margin:0 8px;">${item.qty}</span>
+        <div>
 
-        <button onclick="changeQty(${index},1)">+</button>
-    </div>
+            <strong>${item.product}</strong><br>
 
-    <div>₹${item.price}</div>
+            <small>${item.barcode}</small>
 
-    <div>₹${amount}</div>
+        </div>
 
-    <div>
-        <button onclick="removeItem(${index})">🗑️</button>
+        <div>${item.size}</div>
+
+        <div>
+
+            <button onclick="changeQty(${index},-1)">−</button>
+
+            <span style="margin:0 8px;">${item.qty}</span>
+
+            <button onclick="changeQty(${index},1)">+</button>
+
+        </div>
+
+        <div>₹${item.price}</div>
+
+        <div>₹${amount}</div>
+
+        <div>
+
+            <button onclick="removeItem(${index})">🗑️</button>
+
+        </div>
+
     </div>
 
 </div>
