@@ -196,6 +196,7 @@ overflow-x:hidden;
     flex-direction:column;
 }
 .right-panel{
+   display:block;
 
     position:sticky;
 
