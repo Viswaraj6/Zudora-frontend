@@ -304,9 +304,7 @@ overflow-x:hidden;
     border-bottom:1px solid #ddd;
 
     padding:18px 20px;
-    position:sticky;
-    bottom:55px;
-    z-index:19;
+   
 }
 
 .footer-summary.hidden{
