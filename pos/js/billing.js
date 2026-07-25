@@ -625,19 +625,14 @@ function scrollToCart(){
 function toggleSummary(){
 
     const content = document.getElementById("summaryContent");
-
     const arrow = document.getElementById("summaryArrow");
 
     content.classList.toggle("hide");
 
     if(content.classList.contains("hide")){
-
         arrow.innerHTML = "▼";
-
     }else{
-
         arrow.innerHTML = "▲";
-
     }
 
 }
