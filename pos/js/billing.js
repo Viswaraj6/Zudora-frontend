@@ -218,7 +218,7 @@ function addToCart(product,size){
    
 renderCart();
 
-showScanToast(product.name + " (" + size.size + ") Added");
+showScanToast(product,size);
 }
 function renderCart(){
 
