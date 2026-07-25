@@ -188,44 +188,60 @@
     </div>
  <div class="cart-body">
 </div>
-  <div class="cart-summary">
+<div class="cart-summary">
 
-    <div class="summary-top">
+    <!-- Summary Header -->
+    <div class="summary-header" onclick="toggleSummary()">
 
-      <span>Items : <span id="itemCount">0</span></span>
+        <div>
+            🛒
+            <span id="itemCount">0</span> Items |
+            <span id="totalQty">0</span> Qty |
+            ₹<span id="grandTotal">0</span>
+        </div>
 
-        <button class="clear-btn">Clear All</button>
+        <span id="summaryArrow">▼</span>
 
     </div>
 
-   <div class="summary-row">
-    <span>Total Qty</span>
-    <span id="totalQty">0</span>
-</div>
+    <!-- Expand Area -->
+    <div id="summaryContent">
 
-  <div class="summary-row">
-    <span>Sub Total</span>
-    <span>₹<span id="subTotal">0</span></span>
-</div>
+        <div class="summary-row">
+            <span>Sub Total</span>
+            <span>₹<span id="subTotal">0</span></span>
+        </div>
 
-    <div class="summary-row">
-        <span>Discount</span>
-        <span>₹0</span>
+        <div class="summary-row">
+            <span>Discount</span>
+            <span>₹0</span>
+        </div>
+
+        <div class="summary-row">
+            <span>Round Off</span>
+            <span>₹0</span>
+        </div>
+
+        <div class="grand-total">
+            <span>Grand Total</span>
+            <span>₹<span id="grandTotalValue">0</span></span>
+        </div>
+
     </div>
 
-    <div class="summary-row">
-        <span>Round Off</span>
-        <span>₹0</span>
-    </div>
+    <!-- Checkout -->
+    <button class="checkout-btn">
 
-   <div class="grand-total">
+        <span>Checkout</span>
 
-    <span>Grand Total</span>
+        <span>
+            ₹<span id="checkoutAmount">0</span> →
+        </span>
 
-    <span>₹<span id="grandTotal">0</span></span>
+    </button>
 
 </div>
-  <button
+       <button
         id="mobilePaymentBtn"
         class="mobile-payment-btn">
         Proceed to Payment →
