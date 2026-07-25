@@ -265,6 +265,81 @@ overflow-x:hidden;
     font-size:15px;
 
 }
+.cart-footer{
+
+    display:grid;
+
+    grid-template-columns:50px 2fr 70px 90px 100px 120px 70px;
+
+    align-items:center;
+
+    padding:14px 15px;
+
+    background:#fafafa;
+
+    border-top:1px solid #ddd;
+
+    border-bottom:1px solid #ddd;
+
+    font-weight:bold;
+
+}
+
+.footer-arrow{
+
+    text-align:center;
+
+    cursor:pointer;
+
+    font-size:18px;
+
+}
+
+.footer-summary{
+
+    background:#fff;
+
+    border-bottom:1px solid #ddd;
+
+    padding:18px 20px;
+
+}
+
+.footer-summary.hidden{
+
+    display:none;
+
+}
+
+.summary-row{
+
+    display:flex;
+
+    justify-content:space-between;
+
+    padding:8px 0;
+
+    font-size:15px;
+
+}
+
+.grand-total{
+
+    display:flex;
+
+    justify-content:space-between;
+
+    margin-top:12px;
+
+    padding-top:12px;
+
+    border-top:1px dashed #ddd;
+
+    font-weight:bold;
+
+    font-size:18px;
+
+}
 .summary-title{
 
     font-size:15px;
