@@ -669,6 +669,59 @@ function toggleFooterSummary(){
     }
 
 }
+function enableSwipe() {
+
+    if (window.innerWidth > 1024) return;
+
+    document.querySelectorAll(".swipe-item").forEach(item => {
+
+        const row = item.querySelector(".cart-item");
+
+        let startX = 0;
+        let currentX = 0;
+
+        row.addEventListener("touchstart", e => {
+
+            startX = e.touches[0].clientX;
+
+        });
+
+        row.addEventListener("touchmove", e => {
+
+            currentX = e.touches[0].clientX;
+
+            const diff = currentX - startX;
+
+            if(diff < 0){
+
+                row.style.transform =
+                    `translateX(${Math.max(diff,-110)}px)`;
+
+            }
+
+        });
+
+        row.addEventListener("touchend", () => {
+
+            const moved = currentX - startX;
+
+            if(moved < -70){
+
+                row.style.transform =
+                    "translateX(-110px)";
+
+            }else{
+
+                row.style.transform =
+                    "translateX(0px)";
+
+            }
+
+        });
+
+    });
+
+}
 function openCheckout(){
 
     alert("Checkout Screen Coming Next 🚀");
