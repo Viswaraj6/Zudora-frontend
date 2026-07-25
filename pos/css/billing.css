@@ -1009,9 +1009,17 @@ background:#0f6d59;
 
 }
 
-    .customer-btn{
-        width:100%;
-    }
+   .customer-btn{
+
+    width:140px;
+
+    height:44px;
+
+    font-size:15px;
+
+    border-radius:8px;
+
+}
 
     .billing-layout{
 
