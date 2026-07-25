@@ -635,3 +635,8 @@ function toggleSummary(){
     }
 
 }
+function openCheckout(){
+
+    alert("Checkout Screen Coming Next 🚀");
+
+}
