@@ -278,12 +278,6 @@ overflow-x:hidden;
     transition:.25s;
 
 }
-.summary-row{
-    display:flex;
-    justify-content:space-between;
-    padding:8px 0;
-    font-size:15px;
-}
 .checkout-btn{
 width:100%;
  display:none;
