@@ -701,24 +701,42 @@ function enableSwipe() {
 
         });
 
-        row.addEventListener("touchend", () => {
+       row.addEventListener("touchend", () => {
 
-            const moved = currentX - startX;
+    const moved = currentX - startX;
 
-            if(moved < -70){
+    if(moved < -120){
 
-                row.style.transform =
-                    "translateX(-110px)";
+        row.style.transition = ".25s";
 
-            }else{
+        row.style.transform = "translateX(-100%)";
 
-                row.style.transform =
-                    "translateX(0px)";
+        setTimeout(() => {
 
-            }
+            const index = [...document.querySelectorAll(".swipe-item")]
+                .indexOf(item);
 
-        });
+            removeItem(index);
 
+        }, 220);
+
+    }
+    else if(moved < -70){
+
+        row.style.transition = ".25s";
+
+        row.style.transform = "translateX(-110px)";
+
+    }
+    else{
+
+        row.style.transition = ".25s";
+
+        row.style.transform = "translateX(0px)";
+
+    }
+
+});
     });
 
 }
