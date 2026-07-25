@@ -269,6 +269,12 @@ overflow-x:hidden;
 }
 .cart-footer{
 
+    position:sticky;
+
+    bottom:0;
+
+    z-index:20;
+
     display:grid;
 
     grid-template-columns:50px 2fr 70px 90px 100px 120px 70px;
@@ -286,7 +292,6 @@ overflow-x:hidden;
     font-weight:bold;
 
 }
-
 .footer-arrow{
 
     text-align:center;
