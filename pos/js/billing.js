@@ -470,23 +470,17 @@ function openCamera(){
 
         return html5QrCode.start(
 
-            cameraId,
+    cameraId,
 
-            {
-                fps:10,
+    {
+        fps:10
+    },
 
-                qrbox:{
-                    width:250,
-                    height:150
-                }
-            },
+    onScanSuccess,
 
-            onScanSuccess,
+    ()=>{}
 
-            ()=>{}
-
-        );
-
+);
     })
 
     .catch(err=>{
