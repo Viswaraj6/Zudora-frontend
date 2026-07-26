@@ -207,6 +207,7 @@ overflow-x:hidden;
     top:110px;
 
     height:calc(100vh - 130px);
+height:100%;
 
     background:#fff;
 
