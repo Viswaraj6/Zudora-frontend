@@ -10,7 +10,9 @@ background:#eef8f6;
 overflow-x:hidden;
 }
 .container{
-    padding:160px 20px 20px;
+    padding:90px 20px 0;
+
+    height:calc(100vh - 72px);
 }
 .header{
     position:fixed;
