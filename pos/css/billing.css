@@ -1046,7 +1046,17 @@ background:#0f6d59;
     padding:8px;
 
 }
+.customer-btn{
 
+    width:100px;
+
+    height:40px;
+
+    font-size:15px;
+
+    border-radius:8px;
+
+}
    
 .search-box input{
 
