@@ -8,6 +8,13 @@ font-family:Arial,sans-serif;
 body{
 background:#eef8f6;
 overflow-x:hidden;
+ height:100%;    
+}
+html{
+
+    height:100%;
+
+
 }
 .container{
     padding:90px 20px 0;
