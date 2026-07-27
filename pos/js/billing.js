@@ -759,12 +759,12 @@ function enableSwipe() {
     });
 
 }
-function searchCustomer(){
+async function searchCustomer(){
 
     const input = document.getElementById("customerSearch");
     const dropdown = document.getElementById("customerDropdown");
 
-    const value = input.value.toLowerCase().trim();
+    const value = input.value.trim();
 
     if(value === ""){
 
@@ -774,26 +774,43 @@ function searchCustomer(){
 
     }
 
-    const result = customers.filter(c =>
-        c.name.toLowerCase().includes(value) ||
-        c.mobile.includes(value)
+    const res = await fetch(
+        BASE_URL +
+        "/pos/customers/search?q=" +
+        encodeURIComponent(value)
     );
+
+    const data = await res.json();
 
     dropdown.innerHTML = "";
 
-    result.forEach(c => {
+    if(data.customers.length === 0){
 
-        dropdown.innerHTML += `
+        dropdown.innerHTML =
+        `<div class="customer-item">
+            No Customer Found
+        </div>`;
+
+    }else{
+
+        data.customers.forEach(c=>{
+
+            dropdown.innerHTML += `
+
             <div class="customer-item"
-                 onclick="selectCustomer('${c.name}','${c.mobile}')">
+                 onclick="selectCustomer('${c._id}','${c.name}','${c.mobile}')">
 
-                <strong>${c.name}</strong>
+                <strong>${c.name}</strong><br>
+
                 <small>${c.mobile}</small>
 
             </div>
-        `;
 
-    });
+            `;
+
+        });
+
+    }
 
     dropdown.classList.remove("hidden");
 
