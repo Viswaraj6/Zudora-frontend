@@ -335,12 +335,11 @@ function openCustomer(){
 
     if(window.innerWidth <= 1024){
 
-        window.location.href="customer.html";
+        window.location.href = "customer.html";
 
     }else{
 
-        document.getElementById("customerPopup")
-            .classList.remove("hidden");
+        document.getElementById("customerSearch").focus();
 
     }
 
