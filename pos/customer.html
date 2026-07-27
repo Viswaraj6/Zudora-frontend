@@ -37,7 +37,35 @@
     <div id="customerList" class="customer-list">
 
     </div>
+<div id="customerPopup" class="popup hidden">
 
+    <div class="popup-box">
+
+        <h3>Add Customer</h3>
+
+        <input type="text" id="custName" placeholder="Customer Name">
+
+        <input type="text" id="custMobile" placeholder="Mobile Number">
+
+        <input type="email" id="custEmail" placeholder="Email">
+
+        <input type="text" id="custAddress" placeholder="Address">
+
+        <div class="popup-buttons">
+
+            <button onclick="saveCustomer()">
+                Save
+            </button>
+
+            <button onclick="closeCustomerPopup()">
+                Cancel
+            </button>
+
+        </div>
+
+    </div>
+
+</div>
 </div>
 
 <script src="js/customer.js"></script>
