@@ -1679,3 +1679,41 @@ display:none !important;
     }
 
 }
+.customer-popup{
+
+    position:fixed;
+    inset:0;
+
+    background:rgba(0,0,0,.45);
+
+    display:flex;
+
+    justify-content:center;
+
+    align-items:center;
+
+    z-index:9999;
+
+}
+
+.customer-popup-box{
+
+    width:520px;
+
+    max-height:85vh;
+
+    overflow:auto;
+
+    background:#fff;
+
+    border-radius:15px;
+
+    padding:20px;
+
+}
+
+.customer-popup.hidden{
+
+    display:none;
+
+}
