@@ -411,6 +411,40 @@
     </div>
 
 </div>
+        <!-- Customer Popup -->
+
+<div id="customerPopup" class="customer-popup hidden">
+
+    <div class="customer-popup-box">
+
+        <div class="popup-header">
+
+            <h3>Customers</h3>
+
+            <button onclick="closeCustomerPopup()">✕</button>
+
+        </div>
+
+        <div class="search-box">
+
+            <input
+                type="text"
+                id="popupCustomerSearch"
+                placeholder="Search Customer">
+
+        </div>
+
+        <button class="add-btn" onclick="openAddCustomer()">
+            + Add Customer
+        </button>
+
+        <div id="popupCustomerList" class="customer-list">
+
+        </div>
+
+    </div>
+
+</div>
 <div id="goCartBar" class="go-cart hidden" onclick="scrollToCart()">
 
     <div>
