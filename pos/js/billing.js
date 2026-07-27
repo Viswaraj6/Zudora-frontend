@@ -341,12 +341,9 @@ function openCustomer(){
     if(window.innerWidth <= 1024){
 
         window.location.href = "customer.html";
-
         return;
 
     }
-
-    loadPopupCustomers();
 
     document
         .getElementById("customerPopup")
