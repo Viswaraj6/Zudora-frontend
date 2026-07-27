@@ -8,7 +8,20 @@ let allProducts = [];
 let cart = [];
 let html5QrCode = null;
 let scanLock = false;
-
+const customers = [
+    {
+        name: "Rajesh",
+        mobile: "9876543210"
+    },
+    {
+        name: "Arun",
+        mobile: "9876543211"
+    },
+    {
+        name: "Kumar",
+        mobile: "9876543212"
+    }
+];
 window.onload = () => {
 
     loadProducts();
@@ -22,6 +35,10 @@ window.onload = () => {
     document
         .getElementById("cameraBtn")
         .addEventListener("click", openCamera);
+    document
+    .getElementById("customerSearch")
+    .addEventListener("input", searchCustomer);
+    
 renderCart();
 };
 async function loadProducts() {
