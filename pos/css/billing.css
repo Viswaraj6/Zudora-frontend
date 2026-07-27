@@ -192,15 +192,24 @@ html{
 }
 
 .customer-btn{
-    width:180px;
+    width:170px;
     height:55px;
     border:none;
     border-radius:10px;
     background:#16a085;
     color:#fff;
-    font-size:18px;
+    font-size:16px;
     font-weight:600;
     cursor:pointer;
+    flex-shrink:0;
+}
+
+.desktop-text{
+    display:inline;
+}
+
+.mobile-text{
+    display:none;
 }
 .billing-layout{
     display:grid;
