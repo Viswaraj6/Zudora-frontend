@@ -424,7 +424,64 @@
             <button onclick="closeCustomerPopup()">✕</button>
 
         </div>
+<!-- Add Customer Popup -->
 
+<div id="addCustomerPopup" class="customer-popup hidden">
+
+    <div class="customer-popup-box">
+
+        <div class="popup-header">
+
+            <h3>Add Customer</h3>
+
+            <button onclick="closeAddCustomer()">✕</button>
+
+        </div>
+
+        <div style="padding:20px;display:flex;flex-direction:column;gap:12px;">
+
+            <input type="text" id="custName" placeholder="Customer Name">
+
+            <input type="text" id="custMobile" placeholder="Mobile Number">
+
+            <input type="email" id="custEmail" placeholder="Email">
+
+            <textarea
+                id="custAddress"
+                placeholder="Address"
+                style="height:80px;padding:12px;"></textarea>
+
+            <input type="text" id="custCity" placeholder="City">
+
+            <input type="text" id="custPincode" placeholder="Pincode">
+
+            <input type="text" id="custGST" placeholder="GST Number">
+
+            <div style="display:flex;justify-content:flex-end;gap:10px;">
+
+                <button
+                    class="pay-btn"
+                    onclick="closeAddCustomer()">
+
+                    Cancel
+
+                </button>
+
+                <button
+                    class="customer-btn"
+                    onclick="saveCustomer()">
+
+                    Save Customer
+
+                </button>
+
+            </div>
+
+        </div>
+
+    </div>
+
+</div>
         <div class="search-box">
 
             <input
