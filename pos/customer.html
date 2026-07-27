@@ -1,1 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Customers</title>
 
+    <link rel="stylesheet" href="css/customer.css">
+</head>
+<body>
+
+<div class="customer-page">
+
+    <div class="topbar">
+
+        <button class="back-btn" onclick="history.back()">
+            ←
+        </button>
+
+        <h2>Customers</h2>
+
+    </div>
+
+    <div class="search-box">
+
+        <input
+            type="text"
+            id="customerSearch"
+            placeholder="Search Mobile or Name">
+
+    </div>
+
+    <button class="add-btn">
+        + Add Customer
+    </button>
+
+    <div id="customerList" class="customer-list">
+
+    </div>
+
+</div>
+
+<script src="js/customer.js"></script>
+
+</body>
+</html>
