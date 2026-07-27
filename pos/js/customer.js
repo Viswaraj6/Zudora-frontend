@@ -4,8 +4,7 @@ let customers = [];
 const customerList = document.getElementById("customerList");
 const searchInput = document.getElementById("customerSearch");
 
-renderCustomers(customers);
-
+loadCustomers();
 function renderCustomers(data){
 
     customerList.innerHTML = "";
