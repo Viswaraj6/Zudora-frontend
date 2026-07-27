@@ -353,6 +353,13 @@ function openCustomer(){
         .classList.remove("hidden");
 
 }
+function closeCustomerPopup(){
+
+    document
+        .getElementById("customerPopup")
+        .classList.add("hidden");
+
+}
 function openSearch(list){
 
     document
