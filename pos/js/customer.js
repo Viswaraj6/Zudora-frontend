@@ -5,6 +5,27 @@ const customerList = document.getElementById("customerList");
 const searchInput = document.getElementById("customerSearch");
 
 loadCustomers();
+async function loadCustomers(){
+
+    try{
+
+        const res = await fetch(BASE_URL + "/pos/customers");
+
+        const data = await res.json();
+
+        customers = data.customers || [];
+
+        renderCustomers(customers);
+
+    }catch(err){
+
+        console.error(err);
+
+        alert("Unable to load customers");
+
+    }
+
+}
 function renderCustomers(data){
 
     customerList.innerHTML = "";
