@@ -203,7 +203,55 @@ html{
     cursor:pointer;
     flex-shrink:0;
 }
+.customer-item{
 
+    padding:12px 15px;
+
+    border-bottom:1px solid #eee;
+
+    cursor:pointer;
+
+    transition:.2s;
+
+}
+
+.customer-item:hover{
+
+    background:#eef8f6;
+
+}
+
+.customer-item strong{
+
+    display:block;
+
+    color:#222;
+
+    font-size:15px;
+
+}
+
+.customer-item small{
+
+    color:#666;
+
+}
+
+.add-new-customer{
+
+    padding:14px;
+
+    text-align:center;
+
+    background:#16a085;
+
+    color:#fff;
+
+    font-weight:bold;
+
+    cursor:pointer;
+
+}
 .desktop-text{
     display:inline;
 }
