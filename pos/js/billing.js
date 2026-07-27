@@ -771,6 +771,56 @@ function enableSwipe() {
     });
 
 }
+function searchCustomer(){
+
+    const input = document.getElementById("customerSearch");
+    const dropdown = document.getElementById("customerDropdown");
+
+    const value = input.value.toLowerCase().trim();
+
+    if(value === ""){
+
+        dropdown.classList.add("hidden");
+        dropdown.innerHTML = "";
+        return;
+
+    }
+
+    const result = customers.filter(c =>
+        c.name.toLowerCase().includes(value) ||
+        c.mobile.includes(value)
+    );
+
+    dropdown.innerHTML = "";
+
+    result.forEach(c => {
+
+        dropdown.innerHTML += `
+            <div class="customer-item"
+                 onclick="selectCustomer('${c.name}','${c.mobile}')">
+
+                <strong>${c.name}</strong>
+                <small>${c.mobile}</small>
+
+            </div>
+        `;
+
+    });
+
+    dropdown.classList.remove("hidden");
+
+}
+
+function selectCustomer(name,mobile){
+
+    document.getElementById("customerSearch").value =
+        name + " (" + mobile + ")";
+
+    document
+        .getElementById("customerDropdown")
+        .classList.add("hidden");
+
+}
 function openCheckout(){
 
     alert("Checkout Screen Coming Next 🚀");
