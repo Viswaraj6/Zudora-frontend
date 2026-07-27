@@ -1,25 +1,6 @@
-const customers = [
+const BASE_URL = "https://fark618-backend.onrender.com";
 
-    {
-        _id: 1,
-        name: "Rajesh",
-        mobile: "9876543210"
-    },
-
-    {
-        _id: 2,
-        name: "Kumar",
-        mobile: "9876543211"
-    },
-
-    {
-        _id: 3,
-        name: "Arun",
-        mobile: "9876543212"
-    }
-
-];
-
+let customers = [];
 const customerList = document.getElementById("customerList");
 const searchInput = document.getElementById("customerSearch");
 
