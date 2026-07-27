@@ -848,3 +848,18 @@ function openCheckout(){
     alert("Checkout Screen Coming Next 🚀");
 
 }
+function openAddCustomer(){
+
+    document
+        .getElementById("addCustomerPopup")
+        .classList.remove("hidden");
+
+}
+
+function closeAddCustomer(){
+
+    document
+        .getElementById("addCustomerPopup")
+        .classList.add("hidden");
+
+}
