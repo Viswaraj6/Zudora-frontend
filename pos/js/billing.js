@@ -331,6 +331,20 @@ document.getElementById("paymentGrandTotal").innerText = grandTotal;
 document.getElementById("checkoutAmount").innerText = grandTotal;
     
 }
+function openCustomer(){
+
+    if(window.innerWidth <= 1024){
+
+        window.location.href="customer.html";
+
+    }else{
+
+        document.getElementById("customerPopup")
+            .classList.remove("hidden");
+
+    }
+
+}
 function openSearch(list){
 
     document
