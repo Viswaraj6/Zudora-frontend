@@ -1110,7 +1110,13 @@ background:#0f6d59;
     border-radius:8px;
 
 }
-   
+  .customer-search{
+    display:none;
+} 
+ .desktop-text{
+    display:none;
+}
+
 .search-box input{
 
     height:44px;
