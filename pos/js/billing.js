@@ -816,14 +816,24 @@ async function searchCustomer(){
 
 }
 
-function selectCustomer(name,mobile){
+function selectCustomer(id,name,mobile){
+
+    selectedCustomer = {
+
+        id,
+        name,
+        mobile
+
+    };
 
     document.getElementById("customerSearch").value =
-        name + " (" + mobile + ")";
+        `${name} (${mobile})`;
 
     document
         .getElementById("customerDropdown")
         .classList.add("hidden");
+
+    console.log(selectedCustomer);
 
 }
 function openCheckout(){
