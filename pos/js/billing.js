@@ -342,11 +342,15 @@ function openCustomer(){
 
         window.location.href = "customer.html";
 
-    }else{
-
-        document.getElementById("customerSearch").focus();
+        return;
 
     }
+
+    loadPopupCustomers();
+
+    document
+        .getElementById("customerPopup")
+        .classList.remove("hidden");
 
 }
 function openSearch(list){
