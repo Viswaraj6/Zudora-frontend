@@ -117,7 +117,41 @@ html{
     flex:1;
 
 }
+.product-search{
+    flex: 2;
+}
 
+.customer-search{
+    flex: 1;
+    position: relative;
+    min-width: 250px;
+    margin: 0 10px;
+}
+
+.customer-search input{
+    width:100%;
+    height:55px;
+    border:1px solid #dcdcdc;
+    border-radius:10px;
+    padding:0 18px;
+    font-size:16px;
+    background:#fff;
+    outline:none;
+}
+
+.customer-dropdown{
+    position:absolute;
+    top:60px;
+    left:0;
+    right:0;
+    background:#fff;
+    border:1px solid #ddd;
+    border-radius:10px;
+    max-height:250px;
+    overflow-y:auto;
+    box-shadow:0 5px 15px rgba(0,0,0,.15);
+    z-index:9999;
+}
 .camera-btn{
 
     position:absolute;
