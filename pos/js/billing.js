@@ -794,11 +794,76 @@ async function searchCustomer(){
 
     if(data.customers.length === 0){
 
-        dropdown.innerHTML =
-        `<div class="customer-item">
-            No Customer Found
-        </div>`;
+    dropdown.innerHTML = `
 
+        <div class="customer-item">
+
+            ❌ No Customer Found
+
+        </div>
+
+        <button
+            class="create-customer-btn"
+            onclick="toggleCustomerForm()">
+
+            ➕ Create Customer
+
+        </button>
+
+        <div
+            id="customerForm"
+            class="customer-form hidden">
+
+            <input
+                type="text"
+                id="custName"
+                placeholder="Customer Name">
+
+            <input
+                type="text"
+                id="custMobile"
+                placeholder="Mobile Number"
+                value="${value}">
+
+            <input
+                type="email"
+                id="custEmail"
+                placeholder="Email">
+
+            <input
+                type="text"
+                id="custGST"
+                placeholder="GST Number">
+
+            <textarea
+                id="custAddress"
+                placeholder="Address"></textarea>
+
+            <div class="customer-form-actions">
+
+                <button
+                    class="pay-btn"
+                    onclick="toggleCustomerForm()">
+
+                    Cancel
+
+                </button>
+
+                <button
+                    class="save-btn"
+                    onclick="saveCustomer()">
+
+                    Save Customer
+
+                </button>
+
+            </div>
+
+        </div>
+
+    `;
+
+}
     }else{
 
         data.customers.forEach(c=>{
