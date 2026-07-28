@@ -128,9 +128,77 @@
         id="customerSearch"
         placeholder="👤 Search Customer">
 
-    <div id="customerDropdown"
-         class="customer-dropdown hidden">
+   <div id="customerDropdown" class="customer-dropdown hidden">
+
+    <div id="customerResults"></div>
+
+    <div id="customerCreate" class="hidden">
+
+        <div class="no-customer">
+            ❌ No Customer Found
+        </div>
+
+        <button
+            class="create-customer-btn"
+            onclick="toggleCustomerForm()">
+
+            ➕ Create Customer
+
+        </button>
+
+        <div
+            id="customerForm"
+            class="customer-form hidden">
+
+            <input
+                type="text"
+                id="custName"
+                placeholder="Customer Name">
+
+            <input
+                type="text"
+                id="custMobile"
+                placeholder="Mobile Number">
+
+            <input
+                type="email"
+                id="custEmail"
+                placeholder="Email">
+
+            <input
+                type="text"
+                id="custGST"
+                placeholder="GST Number">
+
+            <textarea
+                id="custAddress"
+                placeholder="Address"></textarea>
+
+            <div class="customer-form-actions">
+
+                <button
+                    class="pay-btn"
+                    onclick="toggleCustomerForm()">
+
+                    Cancel
+
+                </button>
+
+                <button
+                    class="save-btn"
+                    onclick="saveCustomer()">
+
+                    Save Customer
+
+                </button>
+
+            </div>
+
+        </div>
+
     </div>
+
+</div>
 
 </div>
     
