@@ -902,6 +902,10 @@ function selectCustomer(id,name,mobile){
         `${name} (${mobile})`;
 
     document
+    .getElementById("customerActions")
+    .classList.remove("hidden");
+
+    document
         .getElementById("customerDropdown")
         .classList.add("hidden");
 
