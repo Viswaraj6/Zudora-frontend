@@ -424,7 +424,27 @@
             <button onclick="closeCustomerPopup()">✕</button>
 
         </div>
-<!-- Add Customer Popup -->
+        <div class="search-box">
+
+            <input
+                type="text"
+                id="popupCustomerSearch"
+                placeholder="Search Customer">
+
+        </div>
+
+        <button class="add-btn" onclick="openAddCustomer()">
+            + Add Customer
+        </button>
+
+        <div id="popupCustomerList" class="customer-list">
+
+        </div>
+
+    </div>
+
+</div>
+        <!-- Add Customer Popup -->
 
 <div id="addCustomerPopup" class="customer-popup hidden">
 
@@ -482,26 +502,7 @@
     </div>
 
 </div>
-        <div class="search-box">
 
-            <input
-                type="text"
-                id="popupCustomerSearch"
-                placeholder="Search Customer">
-
-        </div>
-
-        <button class="add-btn" onclick="openAddCustomer()">
-            + Add Customer
-        </button>
-
-        <div id="popupCustomerList" class="customer-list">
-
-        </div>
-
-    </div>
-
-</div>
 <div id="goCartBar" class="go-cart hidden" onclick="scrollToCart()">
 
     <div>
