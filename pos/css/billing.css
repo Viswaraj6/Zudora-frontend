@@ -1830,3 +1830,84 @@ display:none !important;
     color:#777;
 
 }
+/* ===== Customer Create Form ===== */
+
+.no-customer{
+    padding:15px;
+    text-align:center;
+    color:#666;
+    font-weight:600;
+}
+
+.create-customer-btn{
+
+    width:calc(100% - 20px);
+    margin:10px;
+    height:45px;
+
+    border:none;
+    border-radius:8px;
+
+    background:#16a085;
+    color:#fff;
+
+    font-size:15px;
+    font-weight:bold;
+
+    cursor:pointer;
+}
+
+.create-customer-btn:hover{
+
+    background:#14866d;
+
+}
+
+.customer-form{
+
+    padding:12px;
+
+    display:flex;
+    flex-direction:column;
+    gap:10px;
+
+    border-top:1px solid #eee;
+
+}
+
+.customer-form input,
+.customer-form textarea{
+
+    width:100%;
+
+    border:1px solid #ddd;
+
+    border-radius:8px;
+
+    padding:12px;
+
+    font-size:14px;
+
+    outline:none;
+
+}
+
+.customer-form textarea{
+
+    resize:none;
+
+    height:80px;
+
+}
+
+.customer-form-actions{
+
+    display:flex;
+
+    justify-content:flex-end;
+
+    gap:10px;
+
+    margin-top:10px;
+
+}
