@@ -863,3 +863,81 @@ function closeAddCustomer(){
         .classList.add("hidden");
 
 }
+async function saveCustomer(){
+
+    const customer = {
+
+        name: document.getElementById("custName").value.trim(),
+
+        mobile: document.getElementById("custMobile").value.trim(),
+
+        email: document.getElementById("custEmail").value.trim(),
+
+        address: document.getElementById("custAddress").value.trim(),
+
+        city: document.getElementById("custCity").value.trim(),
+
+        pincode: document.getElementById("custPincode").value.trim(),
+
+        gstNo: document.getElementById("custGST").value.trim()
+
+    };
+
+    if(!customer.name || !customer.mobile){
+
+        alert("Customer Name and Mobile are required");
+        return;
+
+    }
+
+    try{
+
+        const res = await fetch(BASE_URL + "/pos/customers",{
+
+            method:"POST",
+
+            headers:{
+                "Content-Type":"application/json"
+            },
+
+            body:JSON.stringify(customer)
+
+        });
+
+        const data = await res.json();
+
+        if(data.success){
+
+            alert("Customer Added Successfully");
+
+            closeAddCustomer();
+
+            // Billing search box-ல் customer auto fill
+            document.getElementById("customerSearch").value =
+                `${customer.name} (${customer.mobile})`;
+
+            selectedCustomer = data.customer;
+
+            // Form clear
+            document.getElementById("custName").value = "";
+            document.getElementById("custMobile").value = "";
+            document.getElementById("custEmail").value = "";
+            document.getElementById("custAddress").value = "";
+            document.getElementById("custCity").value = "";
+            document.getElementById("custPincode").value = "";
+            document.getElementById("custGST").value = "";
+
+        }else{
+
+            alert(data.message);
+
+        }
+
+    }catch(err){
+
+        console.error(err);
+        alert("Unable to save customer");
+
+    }
+
+}
