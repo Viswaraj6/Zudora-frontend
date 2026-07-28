@@ -976,7 +976,7 @@ async function saveCustomer(){
                 name,
                 mobile,
                 email,
-               gstNo: gst
+               gstNo: gst,
                 address
 
             })
