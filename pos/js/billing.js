@@ -338,6 +338,7 @@ document.getElementById("checkoutAmount").innerText = grandTotal;
 }
 function openCustomer(){
 
+    // Mobile
     if(window.innerWidth <= 1024){
 
         window.location.href = "customer.html";
@@ -345,8 +346,8 @@ function openCustomer(){
 
     }
 
-    document.getElementById("customerPopup")
-        .classList.remove("hidden");
+    // Desktop
+    openAddCustomer();
 
 }
 function closeCustomerPopup(){
