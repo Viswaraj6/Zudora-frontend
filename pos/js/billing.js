@@ -915,11 +915,14 @@ function openCheckout(){
 }
 function toggleCustomerForm(){
 
+    document.querySelector(".customer-item").style.display = "none";
+
+    document.querySelector(".create-customer-btn").style.display = "none";
+
     document
         .getElementById("customerForm")
-        .classList.toggle("hidden");
+        .classList.remove("hidden");
 
-    // Search box-ல type பண்ண mobile number auto fill
     document.getElementById("custMobile").value =
         document.getElementById("customerSearch").value.trim();
 
