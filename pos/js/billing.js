@@ -864,3 +864,14 @@ function closeAddCustomer(){
         .classList.add("hidden");
 
 }
+function toggleCustomerForm(){
+
+    document
+        .getElementById("customerForm")
+        .classList.toggle("hidden");
+
+    // Search box-ல type பண்ண mobile number auto fill
+    document.getElementById("custMobile").value =
+        document.getElementById("customerSearch").value.trim();
+
+}
