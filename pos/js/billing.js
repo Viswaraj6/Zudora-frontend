@@ -939,3 +939,81 @@ function closeCustomerForm(){
     document.querySelector(".create-customer-btn").style.display = "";
 
 }
+async function saveCustomer(){
+
+    const name = document.getElementById("custName").value.trim();
+    const mobile = document.getElementById("custMobile").value.trim();
+    const email = document.getElementById("custEmail").value.trim();
+    const gst = document.getElementById("custGST").value.trim();
+    const address = document.getElementById("custAddress").value.trim();
+
+    if(name === ""){
+
+        alert("Enter Customer Name");
+        return;
+
+    }
+
+    if(mobile === ""){
+
+        alert("Enter Mobile Number");
+        return;
+
+    }
+
+    try{
+
+        const res = await fetch(BASE_URL + "/pos/customers",{
+
+            method:"POST",
+
+            headers:{
+                "Content-Type":"application/json"
+            },
+
+            body:JSON.stringify({
+
+                name,
+                mobile,
+                email,
+                gstNumber: gst,
+                address
+
+            })
+
+        });
+
+        const data = await res.json();
+
+        if(!res.ok){
+
+            alert(data.message || "Unable to save customer");
+            return;
+
+        }
+
+        // Auto Select Customer
+        selectedCustomer = data.customer;
+
+        document.getElementById("customerSearch").value =
+            `${data.customer.name} (${data.customer.mobile})`;
+
+        // Close Dropdown
+        document.getElementById("customerDropdown")
+            .classList.add("hidden");
+
+        // Clear Form
+        document.getElementById("custName").value = "";
+        document.getElementById("custMobile").value = "";
+        document.getElementById("custEmail").value = "";
+        document.getElementById("custGST").value = "";
+        document.getElementById("custAddress").value = "";
+
+    }catch(err){
+
+        console.error(err);
+        alert("Server Error");
+
+    }
+
+}
