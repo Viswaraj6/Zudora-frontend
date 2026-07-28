@@ -203,6 +203,16 @@ html{
     cursor:pointer;
     flex-shrink:0;
 }
+/* Hide Add Customer button only on Desktop */
+@media (min-width:1025px){
+
+    .customer-btn{
+
+        display:none;
+
+    }
+
+}
 .customer-item{
 
     padding:12px 15px;
