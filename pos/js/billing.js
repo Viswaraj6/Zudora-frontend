@@ -1032,3 +1032,8 @@ function clearCustomer(){
         .classList.add("hidden");
 
 }
+function editCustomer(){
+
+    alert("Edit Customer Coming Soon");
+
+}
