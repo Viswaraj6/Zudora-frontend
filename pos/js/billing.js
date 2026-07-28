@@ -916,14 +916,16 @@ function openCheckout(){
 function toggleCustomerForm(){
 
     document.querySelector(".customer-item").style.display = "none";
-
     document.querySelector(".create-customer-btn").style.display = "none";
 
-    document
-        .getElementById("customerForm")
-        .classList.remove("hidden");
+    const form = document.getElementById("customerForm");
 
-    document.getElementById("custMobile").value =
-        document.getElementById("customerSearch").value.trim();
+    form.classList.remove("hidden");
+
+    // Scroll form into view
+    form.scrollIntoView({
+        behavior: "smooth",
+        block: "start"
+    });
 
 }
