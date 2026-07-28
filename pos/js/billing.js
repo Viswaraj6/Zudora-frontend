@@ -863,8 +863,7 @@ async function searchCustomer(){
 
     `;
 
-}
-    }else{
+}else{
 
         data.customers.forEach(c=>{
 
