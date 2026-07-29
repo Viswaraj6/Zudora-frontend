@@ -52,22 +52,43 @@ function renderCustomers(data){
 
 }
 
-searchInput.addEventListener("input",()=>{
+searchInput.addEventListener("input", () => {
 
-    const value = searchInput.value.toLowerCase();
+    const value = searchInput.value.trim().toLowerCase();
 
-    const filtered = customers.filter(c=>
+    // Search empty
+    if (value === "") {
 
+        renderCustomers(customers);
+
+        document.getElementById("customerCreate")
+            .classList.add("hidden");
+
+        return;
+    }
+
+    const filtered = customers.filter(c =>
         c.name.toLowerCase().includes(value) ||
-
         c.mobile.includes(value)
-
     );
 
     renderCustomers(filtered);
 
-});
+    if (filtered.length === 0) {
 
+        document.getElementById("customerCreate")
+            .classList.remove("hidden");
+
+        document.getElementById("custMobile").value = value;
+
+    } else {
+
+        document.getElementById("customerCreate")
+            .classList.add("hidden");
+
+    }
+
+});
 function selectCustomer(id){
 
     const customer =
