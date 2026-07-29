@@ -773,15 +773,20 @@ async function searchCustomer(){
     const input = document.getElementById("customerSearch");
     const dropdown = document.getElementById("customerDropdown");
     const results = document.getElementById("customerResults");
-const createBox = document.getElementById("customerCreate");
+    const createBox = document.getElementById("customerCreate");
+
     const value = input.value.trim();
 
+    // Empty
     if(value === ""){
 
         dropdown.classList.add("hidden");
-        results.innerHTML = "";
-        return;
 
+        results.innerHTML = "";
+
+        createBox.classList.add("hidden");
+
+        return;
     }
 
     const res = await fetch(
@@ -792,94 +797,33 @@ const createBox = document.getElementById("customerCreate");
 
     const data = await res.json();
 
-   results.innerHTML = "";
+    results.innerHTML = "";
 
     if(data.customers.length === 0){
 
-    dropdown.innerHTML = `
+        createBox.classList.remove("hidden");
 
-        <div class="customer-item">
+        document
+            .getElementById("customerForm")
+            .classList.add("hidden");
 
-            ❌ No Customer Found
+        document.getElementById("custMobile").value = value;
 
-        </div>
+    }else{
 
-        <button
-            class="create-customer-btn"
-            onclick="toggleCustomerForm()">
+        createBox.classList.add("hidden");
 
-            ➕ Create Customer
+        data.customers.forEach(customer=>{
 
-        </button>
+            results.innerHTML += `
+                <div class="customer-item"
+                     onclick='selectCustomer(${JSON.stringify(customer)})'>
 
-        <div
-            id="customerForm"
-            class="customer-form hidden">
+                    <strong>${customer.name}</strong><br>
 
-            <input
-                type="text"
-                id="custName"
-                placeholder="Customer Name">
+                    <small>${customer.mobile}</small>
 
-            <input
-                type="text"
-                id="custMobile"
-                placeholder="Mobile Number"
-                value="${value}">
-
-            <input
-                type="email"
-                id="custEmail"
-                placeholder="Email">
-
-            <input
-                type="text"
-                id="custGST"
-                placeholder="GST Number">
-
-            <textarea
-                id="custAddress"
-                placeholder="Address"></textarea>
-
-            <div class="customer-form-actions">
-
-                <button
-                    class="pay-btn"
-                    onclick="toggleCustomerForm()">
-
-                    Cancel
-
-                </button>
-
-                <button
-                    class="save-btn"
-                    onclick="saveCustomer()">
-
-                    Save Customer
-
-                </button>
-
-            </div>
-
-        </div>
-
-    `;
-
-}else{
-
-        data.customers.forEach(c=>{
-
-            dropdown.innerHTML += `
-
-            <div class="customer-item"
-                onclick='selectCustomer(${JSON.stringify(c)})'
-
-                <strong>${c.name}</strong><br>
-
-                <small>${c.mobile}</small>
-
-            </div>
-
+                </div>
             `;
 
         });
@@ -889,7 +833,6 @@ const createBox = document.getElementById("customerCreate");
     dropdown.classList.remove("hidden");
 
 }
-
 function selectCustomer(customer){
 
     selectedCustomer = customer;
