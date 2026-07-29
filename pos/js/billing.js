@@ -772,13 +772,14 @@ async function searchCustomer(){
 
     const input = document.getElementById("customerSearch");
     const dropdown = document.getElementById("customerDropdown");
-
+    const results = document.getElementById("customerResults");
+const createBox = document.getElementById("customerCreate");
     const value = input.value.trim();
 
     if(value === ""){
 
         dropdown.classList.add("hidden");
-        dropdown.innerHTML = "";
+        results.innerHTML = "";
         return;
 
     }
@@ -791,7 +792,7 @@ async function searchCustomer(){
 
     const data = await res.json();
 
-    dropdown.innerHTML = "";
+   results.innerHTML = "";
 
     if(data.customers.length === 0){
 
