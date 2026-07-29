@@ -856,14 +856,6 @@ function openCheckout(){
 }
 function toggleCustomerForm(){
 
-    document.querySelector(".customer-item").style.display = "none";
-
-    document.querySelector(".create-customer-btn").style.display = "none";
-
-    document
-        .getElementById("customerDropdown")
-        .classList.add("show-form");
-
     document
         .getElementById("customerForm")
         .classList.remove("hidden");
