@@ -920,17 +920,16 @@ function openCheckout(){
 function toggleCustomerForm(){
 
     document.querySelector(".customer-item").style.display = "none";
+
     document.querySelector(".create-customer-btn").style.display = "none";
 
-    const form = document.getElementById("customerForm");
+    document
+        .getElementById("customerDropdown")
+        .classList.add("show-form");
 
-    form.classList.remove("hidden");
-
-    // Scroll form into view
-    form.scrollIntoView({
-        behavior: "smooth",
-        block: "start"
-    });
+    document
+        .getElementById("customerForm")
+        .classList.remove("hidden");
 
 }
 function closeCustomerForm(){
