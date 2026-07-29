@@ -1146,3 +1146,26 @@ function loadSelectedCustomer(){
         .getElementById("selectedCustomerBox")
         .classList.add("show");
 }
+function editSelectedCustomer(){
+
+    window.location.href = "customer.html";
+
+}
+
+function clearSelectedCustomer(){
+
+    localStorage.removeItem("selectedCustomer");
+
+    selectedCustomer = null;
+
+    document
+        .getElementById("selectedCustomerBox")
+        .classList.remove("show");
+
+    document.getElementById("customerSearch").value = "";
+
+    document
+        .getElementById("customerActions")
+        .classList.add("hidden");
+
+}
