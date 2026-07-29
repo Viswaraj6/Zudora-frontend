@@ -152,6 +152,11 @@ html{
     box-shadow:0 5px 15px rgba(0,0,0,.15);
     z-index:9999;
 }
+.customer-dropdown.show-form{
+
+    max-height:520px;
+
+}
 .camera-btn{
 
     position:absolute;
