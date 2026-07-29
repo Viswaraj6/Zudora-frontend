@@ -168,12 +168,14 @@ async function saveCustomer(){
 }
 function toggleCustomerForm(){
 
+    document.getElementById("customerCreate")
+        .classList.remove("hidden");
+
     document.getElementById("noCustomerMsg").style.display = "none";
 
     document.getElementById("createCustomerBtn").style.display = "none";
 
-    document
-        .getElementById("customerForm")
+    document.getElementById("customerForm")
         .classList.remove("hidden");
 
 }
