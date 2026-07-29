@@ -142,7 +142,7 @@ html{
 .customer-dropdown{
 
     position:absolute;
- max-height:calc(100vh - 160px);
+ max-height:560px;
     top:60px;
     left:0;
     right:0;
