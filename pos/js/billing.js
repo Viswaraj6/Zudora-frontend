@@ -776,7 +776,11 @@ async function searchCustomer(){
     const createBox = document.getElementById("customerCreate");
 
     const value = input.value.trim();
+if(isEditMode){
 
+    return;
+
+}
     // Empty
   if(value === ""){
 
