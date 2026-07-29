@@ -155,7 +155,7 @@ async function saveCustomer(){
 
         alert("Customer Added Successfully");
 
-        closeCustomerPopup();
+       
 
         loadCustomers();
 
