@@ -934,7 +934,12 @@ function toggleCustomerForm(){
 }
 function closeCustomerForm(){
 
-    document.getElementById("customerForm")
+    document
+        .getElementById("customerDropdown")
+        .classList.remove("show-form");
+
+    document
+        .getElementById("customerForm")
         .classList.add("hidden");
 
     document.querySelector(".customer-item").style.display = "";
