@@ -1144,8 +1144,15 @@ function loadSelectedCustomer(){
 
    const box = document.getElementById("selectedCustomerBox");
 
-box.classList.remove("hidden");
-box.classList.add("show");
+if (window.innerWidth <= 768) {
+
+    box.classList.remove("hidden");
+    box.classList.add("show");
+
+} else {
+
+    box.classList.add("hidden");
+}
 }
 function editSelectedCustomer(){
 
