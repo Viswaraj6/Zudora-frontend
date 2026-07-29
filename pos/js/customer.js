@@ -151,38 +151,24 @@ async function saveCustomer(){
 
     const data = await res.json();
 
-    if(data.success){
+   if (data.success) {
+
+    // Newly created customer-ஐ select பண்ணு
+    localStorage.setItem(
+        "selectedCustomer",
+        JSON.stringify(data.customer)
+    );
 
     alert("Customer Added Successfully");
 
-    // Clear Form
-    document.getElementById("custName").value = "";
-    document.getElementById("custMobile").value = "";
-    document.getElementById("custEmail").value = "";
-    document.getElementById("custGST").value = "";
-    document.getElementById("custAddress").value = "";
+    // Billing page-க்கு திரும்பு
+    window.location.href = "billing.html";
 
-    // Hide Form
-    document.getElementById("customerForm")
-        .classList.add("hidden");
+} else {
 
-    document.getElementById("customerCreate")
-        .classList.add("hidden");
+    alert(data.message || "Failed");
 
-    // Show Customer List
-    customerList.style.display = "block";
-
-    // Clear Search
-    searchInput.value = "";
-
-    // Reload Customers
-    loadCustomers();
-
-}else{
-        alert(data.message || "Failed");
-
-    }
-
+}
 }
 function toggleCustomerForm(){
 
