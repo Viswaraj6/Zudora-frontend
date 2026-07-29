@@ -164,7 +164,6 @@ body{
 }
 #customerForm{
 
-    display:none !important;
     flex-direction:column;
 
     gap:12px;
@@ -173,6 +172,11 @@ body{
 
 }
 
+#customerForm:not(.hidden){
+
+    display:flex;
+
+}
 #customerForm input{
 
     width:100%;
