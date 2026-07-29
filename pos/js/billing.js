@@ -1176,5 +1176,5 @@ box.classList.add("hidden");
     document
         .getElementById("customerActions")
         .classList.add("hidden");
-
+document.querySelector(".customer-btn").style.display = "";
 }
