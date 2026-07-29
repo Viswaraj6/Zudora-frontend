@@ -872,13 +872,20 @@ document.getElementById("createCustomerBtn").style.display = "none";
 }
 function closeCustomerForm(){
 
-    document
-        .getElementById("customerForm")
+    isEditMode = false;
+
+    document.getElementById("saveCustomerBtn").textContent =
+        "Save Customer";
+
+    document.getElementById("customerForm")
         .classList.add("hidden");
 
-    document
-        .getElementById("customerCreate")
+    document.getElementById("customerCreate")
         .classList.add("hidden");
+
+    document.getElementById("noCustomerMsg").style.display = "";
+
+    document.getElementById("createCustomerBtn").style.display = "";
 
 }
 async function saveCustomer(){
