@@ -1057,6 +1057,22 @@ function clearCustomer(){
 }
 function editCustomer(){
 
-    alert("Edit Customer Coming Soon");
+    if(!selectedCustomer){
+        return;
+    }
+
+    isEditMode = true;
+
+    document
+        .getElementById("customerDropdown")
+        .classList.remove("hidden");
+
+    document
+        .getElementById("customerDropdown")
+        .classList.add("show-form");
+
+    document
+        .getElementById("customerForm")
+        .classList.remove("hidden");
 
 }
