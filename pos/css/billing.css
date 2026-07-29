@@ -2036,17 +2036,16 @@ display:none !important;
     display:none;
     justify-content:space-between;
     align-items:center;
-    margin-top:10px;
-    padding:10px 15px;
+    padding:12px 15px;
+    margin:10px;
+    background:#f8f8f8;
     border:1px solid #ddd;
     border-radius:10px;
-    background:#fff;
 }
 
 .selected-customer.show{
     display:flex;
 }
-
 .customer-buttons button{
     margin-left:8px;
     cursor:pointer;
