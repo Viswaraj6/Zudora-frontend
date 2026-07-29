@@ -346,7 +346,7 @@ height:100%;
 
 }
 .cart-header{
-
+ margin-top:0;
     display:grid;
 
     grid-template-columns:50px 2fr 70px 90px 100px 120px 70px;
