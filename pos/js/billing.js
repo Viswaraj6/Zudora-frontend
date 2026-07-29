@@ -1142,9 +1142,10 @@ function loadSelectedCustomer(){
     document.getElementById("selectedCustomerMobile").innerText =
         customer.mobile;
 
-    document
-        .getElementById("selectedCustomerBox")
-        .classList.add("show");
+   const box = document.getElementById("selectedCustomerBox");
+
+box.classList.remove("hidden");
+box.classList.add("show");
 }
 function editSelectedCustomer(){
 
