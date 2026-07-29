@@ -2037,10 +2037,10 @@ display:none !important;
     justify-content:space-between;
     align-items:center;
     padding:12px 15px;
-    margin:0px;
+    margin:-10px;
     background:#f8f8f8;
     border:1px solid #ddd;
-    border-radius:0px;
+    border-radius:10px;
 }
 
 .selected-customer.show{
