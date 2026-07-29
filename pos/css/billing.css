@@ -140,21 +140,35 @@ html{
 }
 
 .customer-dropdown{
+
     position:absolute;
+
     top:60px;
     left:0;
     right:0;
+
     background:#fff;
+
     border:1px solid #ddd;
-    border-radius:10px;
-    max-height:250px;
+    border-radius:12px;
+
+    width:100%;
+
+    max-height:260px;
+
     overflow-y:auto;
-    box-shadow:0 5px 15px rgba(0,0,0,.15);
+
+    box-shadow:0 8px 20px rgba(0,0,0,.15);
+
+    transition:max-height .25s ease;
+
     z-index:9999;
+
 }
+
 .customer-dropdown.show-form{
 
-    max-height:520px;
+    max-height:560px;
 
 }
 .camera-btn{
