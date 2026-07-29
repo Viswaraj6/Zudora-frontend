@@ -159,8 +159,7 @@ body{
 
 #customerForm{
 
-    display:flex;
-
+    display:none !important;
     flex-direction:column;
 
     gap:12px;
