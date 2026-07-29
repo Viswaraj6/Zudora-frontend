@@ -33,6 +33,7 @@ window.onload = () => {
     .addEventListener("input", validateMobile);
     
 renderCart();
+    loadSelectedCustomer();
 };
 async function loadProducts() {
     try {
