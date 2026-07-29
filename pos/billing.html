@@ -166,10 +166,19 @@
                 id="custName"
                 placeholder="Customer Name">
 
-            <input
-                type="text"
-                id="custMobile"
-                placeholder="Mobile Number">
+            <div class="mobile-input-box">
+
+    <input
+        type="text"
+        id="custMobile"
+        placeholder="Mobile Number"
+        maxlength="10">
+
+    <span
+        id="mobileStatus"
+        class="mobile-status"></span>
+
+</div>
 
             <input
                 type="email"
