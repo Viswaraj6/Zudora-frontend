@@ -153,14 +153,32 @@ async function saveCustomer(){
 
     if(data.success){
 
-        alert("Customer Added Successfully");
+    alert("Customer Added Successfully");
 
-       
+    // Clear Form
+    document.getElementById("custName").value = "";
+    document.getElementById("custMobile").value = "";
+    document.getElementById("custEmail").value = "";
+    document.getElementById("custGST").value = "";
+    document.getElementById("custAddress").value = "";
 
-        loadCustomers();
+    // Hide Form
+    document.getElementById("customerForm")
+        .classList.add("hidden");
 
-    }else{
+    document.getElementById("customerCreate")
+        .classList.add("hidden");
 
+    // Show Customer List
+    customerList.style.display = "block";
+
+    // Clear Search
+    searchInput.value = "";
+
+    // Reload Customers
+    loadCustomers();
+
+}else{
         alert(data.message || "Failed");
 
     }
