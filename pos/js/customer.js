@@ -34,7 +34,7 @@ function renderCustomers(data){
         customerList.innerHTML += `
 
         <div class="customer-card"
-            onclick="selectCustomer('${customer._id}')"
+            onclick="selectCustomer('${customer._id}')">
 
             <div class="customer-name">
                 ${customer.name}
