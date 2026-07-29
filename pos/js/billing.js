@@ -1127,6 +1127,7 @@ function loadSelectedCustomer(){
 
     selectedCustomer = customer;
 
+    // Desktop
     document.getElementById("customerSearch").value =
         `${customer.name} (${customer.mobile})`;
 
@@ -1134,4 +1135,14 @@ function loadSelectedCustomer(){
         .getElementById("customerActions")
         .classList.remove("hidden");
 
+    // Mobile Customer Card
+    document.getElementById("selectedCustomerName").innerText =
+        customer.name;
+
+    document.getElementById("selectedCustomerMobile").innerText =
+        customer.mobile;
+
+    document
+        .getElementById("selectedCustomerBox")
+        .classList.add("show");
 }
