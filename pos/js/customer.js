@@ -179,5 +179,8 @@ function toggleCustomerForm(){
 
     document.getElementById("customerForm")
         .classList.remove("hidden");
+    console.log(
+    document.getElementById("customerForm").className
+);
 
 }
