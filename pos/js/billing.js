@@ -889,22 +889,20 @@ async function searchCustomer(){
 
 }
 
-function selectCustomer(id,name,mobile){
+function selectCustomer(customer){
 
-   selectedCustomer = customer;
-    
+    selectedCustomer = customer;
+
     document.getElementById("customerSearch").value =
-        `${name} (${mobile})`;
+        `${customer.name} (${customer.mobile})`;
 
     document
-    .getElementById("customerActions")
-    .classList.remove("hidden");
+        .getElementById("customerActions")
+        .classList.remove("hidden");
 
     document
         .getElementById("customerDropdown")
         .classList.add("hidden");
-
-    console.log(selectedCustomer);
 
 }
 function openCheckout(){
