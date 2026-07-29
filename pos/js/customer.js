@@ -168,7 +168,7 @@ async function saveCustomer(){
 }
 function toggleCustomerForm(){
 
-    console.log("Button Clicked");
+    
 
     document.getElementById("customerCreate")
         .classList.remove("hidden");
@@ -179,8 +179,6 @@ function toggleCustomerForm(){
 
     document.getElementById("customerForm")
         .classList.remove("hidden");
-    console.log(
-    document.getElementById("customerForm").className
-);
+    
 
 }
