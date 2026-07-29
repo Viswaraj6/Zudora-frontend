@@ -1159,9 +1159,10 @@ function clearSelectedCustomer(){
 
     selectedCustomer = null;
 
-    document
-        .getElementById("selectedCustomerBox")
-        .classList.remove("show");
+    const box = document.getElementById("selectedCustomerBox");
+
+box.classList.remove("show");
+box.classList.add("hidden");
 
     document.getElementById("customerSearch").value = "";
 
