@@ -244,7 +244,10 @@ const cartHeader = document.getElementById("cartHeader");
 
     emptyCart.classList.remove("hidden");
     cartHeader.classList.add("hidden");
+document.getElementById("selectedCustomerBox")
+    .classList.add("hidden");
 
+document.querySelector(".customer-btn").style.display = "none";
     cartBody.innerHTML = "";
 
     document.getElementById("footerItems").innerText = 0;
