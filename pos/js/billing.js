@@ -1008,7 +1008,11 @@ function editCustomer(){
 
     dropdown.classList.remove("hidden");
     dropdown.classList.add("show-form");
+document.getElementById("customerCreate").classList.remove("hidden");
 
+document.getElementById("noCustomerMsg").style.display = "none";
+
+document.getElementById("createCustomerBtn").style.display = "none";
     document.getElementById("customerForm").classList.remove("hidden");
 
     document.getElementById("custName").value =
