@@ -267,7 +267,23 @@ document.getElementById("checkoutAmount").innerText = 0;
     cartBody.innerHTML = "";
     emptyCart.classList.add("hidden");
 cartHeader.classList.remove("hidden");
+// Cart has items
 
+document.querySelector(".customer-btn").style.display = "";
+
+if (selectedCustomer) {
+
+    document.querySelector(".customer-btn").style.display = "none";
+
+    document.getElementById("selectedCustomerBox")
+        .classList.remove("hidden");
+
+} else {
+
+    document.getElementById("selectedCustomerBox")
+        .classList.add("hidden");
+
+}
     let grandTotal = 0;
     let totalQty = 0;
 
