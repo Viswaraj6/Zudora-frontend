@@ -14,11 +14,7 @@ async function loadCustomers(){
         const data = await res.json();
 
         customers = data.customers || [];
-
-// Initially hide dropdown
-document
-    .getElementById("customerDropdown")
-    .classList.add("hidden");
+renderCustomers(customers);
         
     }catch(err){
 
