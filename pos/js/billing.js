@@ -891,14 +891,8 @@ async function searchCustomer(){
 
 function selectCustomer(id,name,mobile){
 
-    selectedCustomer = {
-
-        id,
-        name,
-        mobile
-
-    };
-
+   selectedCustomer = customer;
+    
     document.getElementById("customerSearch").value =
         `${name} (${mobile})`;
 
