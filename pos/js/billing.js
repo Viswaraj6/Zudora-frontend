@@ -992,7 +992,20 @@ function clearCustomer(){
     selectedCustomer = null;
 
     document.getElementById("customerSearch").value = "";
+document.getElementById("customerDropdown")
+    .classList.add("hidden");
 
+document.getElementById("customerCreate")
+    .classList.add("hidden");
+
+document.getElementById("customerForm")
+    .classList.add("hidden");
+
+document.getElementById("customerResults").innerHTML = "";
+
+document.getElementById("noCustomerMsg").style.display = "";
+
+document.getElementById("createCustomerBtn").style.display = "";
     document
         .getElementById("customerActions")
         .classList.add("hidden");
