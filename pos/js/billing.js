@@ -996,6 +996,10 @@ function clearCustomer(){
     document
         .getElementById("customerActions")
         .classList.add("hidden");
+    isEditMode = false;
+
+document.getElementById("saveCustomerBtn").textContent =
+    "Save Customer";
 
 }
 function editCustomer(){
