@@ -808,6 +808,13 @@ async function searchCustomer(){
             .classList.add("hidden");
 
         document.getElementById("custMobile").value = value;
+       
+        isEditMode = false;
+
+document.getElementById("saveCustomerBtn").textContent =
+    "Save Customer";
+
+document.getElementById("customerForm").reset?.();
 
     }else{
 
