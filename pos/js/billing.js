@@ -871,7 +871,7 @@ async function searchCustomer(){
             dropdown.innerHTML += `
 
             <div class="customer-item"
-                 onclick="selectCustomer('${c._id}','${c.name}','${c.mobile}')">
+                onclick='selectCustomer(${JSON.stringify(c)})'
 
                 <strong>${c.name}</strong><br>
 
