@@ -59,14 +59,18 @@ searchInput.addEventListener("input", () => {
     // Search empty
     if (value === "") {
 
-        renderCustomers(customers);
+    customerList.style.display = "block";
 
-        document.getElementById("customerCreate")
-            .classList.add("hidden");
+    renderCustomers(customers);
 
-        return;
-    }
+    document.getElementById("customerDropdown")
+        .classList.add("hidden");
 
+    document.getElementById("customerCreate")
+        .classList.add("hidden");
+
+    return;
+}
     const filtered = customers.filter(c =>
         c.name.toLowerCase().includes(value) ||
         c.mobile.includes(value)
