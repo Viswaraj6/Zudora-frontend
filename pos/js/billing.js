@@ -814,7 +814,10 @@ async function searchCustomer(){
 document.getElementById("saveCustomerBtn").textContent =
     "Save Customer";
 
-document.getElementById("customerForm").reset?.();
+document.getElementById("custName").value = "";
+document.getElementById("custEmail").value = "";
+document.getElementById("custGST").value = "";
+document.getElementById("custAddress").value = "";
 
     }else{
 
