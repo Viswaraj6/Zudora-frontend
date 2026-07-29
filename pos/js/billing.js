@@ -1024,9 +1024,13 @@ function clearCustomer(){
     selectedCustomer = null;
 
     document.getElementById("customerSearch").value = "";
+
+    resetCustomerUI();
+
     document
         .getElementById("customerActions")
         .classList.add("hidden");
+
 }
 function editCustomer(){
 
