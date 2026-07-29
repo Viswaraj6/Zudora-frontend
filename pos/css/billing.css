@@ -142,7 +142,7 @@ html{
 .customer-dropdown{
 
     position:absolute;
-
+ max-height:calc(100vh - 160px);
     top:60px;
     left:0;
     right:0;
@@ -166,11 +166,6 @@ html{
 
 }
 
-.customer-dropdown.show-form{
-
-    max-height:calc(100vh - 160px);
-
-}
 .camera-btn{
 
     position:absolute;
