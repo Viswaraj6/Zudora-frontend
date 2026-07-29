@@ -1091,7 +1091,9 @@ background:#0f6d59;
 /* ================= MOBILE ================= */
 
 @media (max-width:768px){
-    
+    .selected-customer.show{
+        display:flex !important;
+    } 
 .mobile-payment-btn{
 
     display:block;
