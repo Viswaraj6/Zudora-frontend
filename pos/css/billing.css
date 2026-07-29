@@ -16,6 +16,9 @@ html{
 
 
 }
+.selected-customer{
+    display:none !important;
+}
 .container{
     padding:90px 20px 0;
 
