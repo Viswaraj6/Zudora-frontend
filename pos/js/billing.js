@@ -862,7 +862,9 @@ function openCheckout(){
 
 }
 function toggleCustomerForm(){
+document.getElementById("noCustomerMsg").style.display = "none";
 
+document.getElementById("createCustomerBtn").style.display = "none";
     document
         .getElementById("customerForm")
         .classList.remove("hidden");
