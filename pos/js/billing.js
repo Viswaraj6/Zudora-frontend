@@ -9,6 +9,7 @@ let cart = [];
 let html5QrCode = null;
 let scanLock = false;
 let selectedCustomer = null;
+let isEditMode = false;
 
 window.onload = () => {
 
