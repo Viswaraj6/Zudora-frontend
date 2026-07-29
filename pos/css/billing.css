@@ -1979,3 +1979,50 @@ display:none !important;
     margin:0;
     height:48px;
 }
+/* ===== Mobile Validation ===== */
+
+.mobile-input-box{
+
+    position:relative;
+
+}
+
+.mobile-status{
+
+    position:absolute;
+
+    right:14px;
+
+    top:50%;
+
+    transform:translateY(-50%);
+
+    font-size:20px;
+
+    font-weight:bold;
+
+}
+
+.mobile-valid{
+
+    border:2px solid #16a34a !important;
+
+}
+
+.mobile-invalid{
+
+    border:2px solid #ef4444 !important;
+
+}
+
+.mobile-status.valid{
+
+    color:#16a34a;
+
+}
+
+.mobile-status.invalid{
+
+    color:#ef4444;
+
+}
