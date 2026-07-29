@@ -1012,7 +1012,11 @@ const res = await fetch(url, {
 
         // Auto Select Customer
         selectedCustomer = data.customer;
-
+alert(
+    isEditMode
+        ? "Customer Updated Successfully"
+        : "Customer Saved Successfully"
+);
         document.getElementById("customerSearch").value =
             `${data.customer.name} (${data.customer.mobile})`;
 
