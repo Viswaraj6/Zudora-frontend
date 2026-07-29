@@ -230,7 +230,19 @@
     <span class="mobile-text">+ 👤</span>
 
 </button>
-    
+  <div id="selectedCustomerBox" class="selected-customer hidden">
+
+    <div class="customer-details">
+        <strong id="selectedCustomerName"></strong><br>
+        <small id="selectedCustomerMobile"></small>
+    </div>
+
+    <div class="customer-buttons">
+        <button onclick="editSelectedCustomer()">✏️</button>
+        <button onclick="clearSelectedCustomer()">✖️</button>
+    </div>
+
+</div>  
 </div>
     <main class="container"> 
 <div class="billing-layout">
