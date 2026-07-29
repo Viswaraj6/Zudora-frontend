@@ -2026,3 +2026,22 @@ display:none !important;
     color:#ef4444;
 
 }
+.selected-customer{
+    display:none;
+    justify-content:space-between;
+    align-items:center;
+    margin-top:10px;
+    padding:10px 15px;
+    border:1px solid #ddd;
+    border-radius:10px;
+    background:#fff;
+}
+
+.selected-customer.show{
+    display:flex;
+}
+
+.customer-buttons button{
+    margin-left:8px;
+    cursor:pointer;
+}
