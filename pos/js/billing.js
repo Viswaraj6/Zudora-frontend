@@ -1197,5 +1197,9 @@ box.classList.add("hidden");
     document
         .getElementById("customerActions")
         .classList.add("hidden");
-document.querySelector(".customer-btn").style.display = "";
+if (cart.length > 0) {
+    document.querySelector(".customer-btn").style.display = "";
+} else {
+    document.querySelector(".customer-btn").style.display = "none";
+}
 }
