@@ -82,21 +82,6 @@ function selectCustomer(id){
     window.location.href = "billing.html";
 
 }
-function openAddCustomer(){
-
-    document
-        .getElementById("customerPopup")
-        .classList.remove("hidden");
-
-}
-
-function closeCustomerPopup(){
-
-    document
-        .getElementById("customerPopup")
-        .classList.add("hidden");
-
-}
 async function saveCustomer(){
 
     const customer = {
