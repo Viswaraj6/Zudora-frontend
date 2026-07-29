@@ -1148,7 +1148,9 @@ if (window.innerWidth <= 768) {
 
     box.classList.remove("hidden");
     box.classList.add("show");
-
+if (window.innerWidth <= 768) {
+    document.querySelector(".customer-btn").style.display = "none";
+}
 } else {
 
     box.classList.add("hidden");
