@@ -36,7 +36,59 @@
     </div>
 
 </div>
+<div id="customerDropdown" class="customer-dropdown hidden">
 
+    <div id="customerResults"></div>
+
+    <div id="customerCreate" class="hidden">
+
+        <div id="noCustomerMsg">
+            Customer Not Found
+        </div>
+
+        <button id="createCustomerBtn"
+                class="add-btn"
+                onclick="toggleCustomerForm()">
+            + Add Customer
+        </button>
+
+        <div id="customerForm" class="hidden">
+
+            <input type="text"
+                   id="custName"
+                   placeholder="Customer Name">
+
+            <input type="text"
+                   id="custMobile"
+                   placeholder="Mobile Number"
+                   maxlength="10">
+
+            <span id="mobileStatus"
+                  class="mobile-status"></span>
+
+            <input type="email"
+                   id="custEmail"
+                   placeholder="Email">
+
+            <input type="text"
+                   id="custGST"
+                   placeholder="GST Number (Optional)">
+
+            <input type="text"
+                   id="custAddress"
+                   placeholder="Address">
+
+            <button class="add-btn"
+                    id="saveCustomerBtn"
+                    onclick="saveCustomer()">
+                Save Customer
+            </button>
+
+        </div>
+
+    </div>
+
+</div>
 <script src="js/customer.js"></script>
 
 </body>
