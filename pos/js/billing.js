@@ -27,6 +27,10 @@ window.onload = () => {
     document
     .getElementById("customerSearch")
     .addEventListener("input", searchCustomer);
+
+    document
+    .getElementById("custMobile")
+    .addEventListener("input", validateMobile);
     
 renderCart();
 };
