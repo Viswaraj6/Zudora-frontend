@@ -1022,6 +1022,30 @@ document.getElementById("saveCustomerBtn").textContent =
     "Save Customer";
 
 }
+function resetCustomerUI(){
+
+    const dropdown = document.getElementById("customerDropdown");
+
+    dropdown.classList.add("hidden");
+    dropdown.classList.remove("show-form");
+
+    document.getElementById("customerResults").innerHTML = "";
+
+    document.getElementById("customerCreate")
+        .classList.add("hidden");
+
+    document.getElementById("customerForm")
+        .classList.add("hidden");
+
+    document.getElementById("noCustomerMsg").style.display = "";
+
+    document.getElementById("createCustomerBtn").style.display = "";
+
+    document.getElementById("saveCustomerBtn").textContent =
+        "Save Customer";
+
+    isEditMode = false;
+}
 function editCustomer(){
 
     if(!selectedCustomer) return;
