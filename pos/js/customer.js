@@ -74,20 +74,29 @@ searchInput.addEventListener("input", () => {
 
     renderCustomers(filtered);
 
-    if (filtered.length === 0) {
+   if (filtered.length === 0) {
 
-        document.getElementById("customerCreate")
-            .classList.remove("hidden");
+    customerList.style.display = "none";
 
-        document.getElementById("custMobile").value = value;
+    document.getElementById("customerDropdown")
+        .classList.remove("hidden");
 
-    } else {
+    document.getElementById("customerCreate")
+        .classList.remove("hidden");
 
-        document.getElementById("customerCreate")
-            .classList.add("hidden");
+    document.getElementById("custMobile").value = value;
 
-    }
+} else {
 
+    customerList.style.display = "block";
+
+    document.getElementById("customerDropdown")
+        .classList.add("hidden");
+
+    document.getElementById("customerCreate")
+        .classList.add("hidden");
+
+}
 });
 function selectCustomer(id){
 
