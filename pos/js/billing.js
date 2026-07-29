@@ -1117,3 +1117,21 @@ document.getElementById("createCustomerBtn").style.display = "none";
         "Update Customer";
 
 }
+function loadSelectedCustomer(){
+
+    const customer = JSON.parse(
+        localStorage.getItem("selectedCustomer")
+    );
+
+    if(!customer) return;
+
+    selectedCustomer = customer;
+
+    document.getElementById("customerSearch").value =
+        `${customer.name} (${customer.mobile})`;
+
+    document
+        .getElementById("customerActions")
+        .classList.remove("hidden");
+
+}
