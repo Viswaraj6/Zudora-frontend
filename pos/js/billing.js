@@ -778,20 +778,9 @@ async function searchCustomer(){
     const value = input.value.trim();
 
     // Empty
-   if(value === ""){
+  if(value === ""){
 
-    dropdown.classList.add("hidden");
-
-    results.innerHTML = "";
-
-    createBox.classList.add("hidden");
-
-    document.getElementById("customerForm")
-        .classList.add("hidden");
-
-    document.getElementById("noCustomerMsg").style.display = "";
-
-    document.getElementById("createCustomerBtn").style.display = "";
+    resetCustomerUI();
 
     return;
 
