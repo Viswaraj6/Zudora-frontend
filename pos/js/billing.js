@@ -891,6 +891,52 @@ function closeCustomerForm(){
     document.getElementById("createCustomerBtn").style.display = "";
 
 }
+
+function validateMobile(){
+
+    const mobile =
+        document.getElementById("custMobile");
+
+    const status =
+        document.getElementById("mobileStatus");
+
+    const value = mobile.value.trim();
+
+    // Digits only
+    mobile.value = value.replace(/\D/g,"");
+
+    if(mobile.value.length === 0){
+
+        mobile.classList.remove("mobile-valid");
+        mobile.classList.remove("mobile-invalid");
+
+        status.textContent = "";
+
+        return;
+
+    }
+
+    if(/^\d{10}$/.test(mobile.value)){
+
+        mobile.classList.add("mobile-valid");
+        mobile.classList.remove("mobile-invalid");
+
+        status.textContent = "✓";
+
+        status.className = "mobile-status valid";
+
+    }else{
+
+        mobile.classList.add("mobile-invalid");
+        mobile.classList.remove("mobile-valid");
+
+        status.textContent = "✕";
+
+        status.className = "mobile-status invalid";
+
+    }
+
+}
 async function saveCustomer(){
 
     const name = document.getElementById("custName").value.trim();
