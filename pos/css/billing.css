@@ -1603,12 +1603,13 @@ display:none !important;
 
     display:flex;
 
-    gap:6px;
+    align-items:center;
+
+    gap:14px;
 
     z-index:20;
 
 }
-
 .customer-actions button{
 
     border:none;
