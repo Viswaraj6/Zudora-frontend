@@ -1051,22 +1051,33 @@ function clearCustomer(){
 }
 function editCustomer(){
 
-    if(!selectedCustomer){
-        return;
-    }
+    if(!selectedCustomer) return;
 
     isEditMode = true;
 
-    document
-        .getElementById("customerDropdown")
-        .classList.remove("hidden");
+    const dropdown = document.getElementById("customerDropdown");
 
-    document
-        .getElementById("customerDropdown")
-        .classList.add("show-form");
+    dropdown.classList.remove("hidden");
+    dropdown.classList.add("show-form");
 
-    document
-        .getElementById("customerForm")
-        .classList.remove("hidden");
+    document.getElementById("customerForm").classList.remove("hidden");
+
+    document.getElementById("custName").value =
+        selectedCustomer.name || "";
+
+    document.getElementById("custMobile").value =
+        selectedCustomer.mobile || "";
+
+    document.getElementById("custEmail").value =
+        selectedCustomer.email || "";
+
+    document.getElementById("custGST").value =
+        selectedCustomer.gstNo || "";
+
+    document.getElementById("custAddress").value =
+        selectedCustomer.address || "";
+
+    document.getElementById("saveCustomerBtn").textContent =
+        "Update Customer";
 
 }
