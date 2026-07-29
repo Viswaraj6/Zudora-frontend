@@ -75,7 +75,7 @@ searchInput.addEventListener("input", () => {
         c.name.toLowerCase().includes(value) ||
         c.mobile.includes(value)
     );
-
+console.log(filtered.length);
     renderCustomers(filtered);
 
    if (filtered.length === 0) {
