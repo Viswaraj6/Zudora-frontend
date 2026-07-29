@@ -1635,6 +1635,13 @@ display:none !important;
     transition:.2s;
 
 }
+.customer-actions button:hover{
+
+    background:#16a085;
+
+    color:#fff;
+
+}
 .empty-cart p{
 
     color:#777;
