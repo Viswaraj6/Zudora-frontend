@@ -1314,7 +1314,7 @@ function calculateCash(){
 
     message.innerHTML = `
         <span class="cash-remaining">
-            Next Payment • Remaining ₹${(total-received).toFixed(0)}
+         Remaining ₹${(total-received).toFixed(0)}
         </span>`;
 
     result.innerHTML = "Next Payment ➜";
