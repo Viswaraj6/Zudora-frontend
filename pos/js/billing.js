@@ -1244,7 +1244,7 @@ const total = document.getElementById("paymentGrandTotal").innerText;
 
 document.getElementById("cashReceived").value = total;
 
-//generateQuickAmounts(parseFloat(total));
+generateQuickAmounts(parseFloat(total));
 
 calculateCash();
         
@@ -1259,6 +1259,44 @@ function closeCashScreen() {
     document.getElementById("cashScreen").style.display = "none";
 
     document.getElementById("paymentPanel").style.display = "block";
+
+}
+function generateQuickAmounts(total){
+
+    const box = document.getElementById("quickAmountButtons");
+
+    box.innerHTML = "";
+
+    const amounts = [
+        total,
+        Math.ceil(total / 100) * 100,
+        Math.ceil(total / 500) * 500,
+        Math.ceil(total / 1000) * 1000,
+        Math.ceil(total / 5000) * 5000
+    ];
+
+    [...new Set(amounts)].forEach(amount=>{
+
+        box.innerHTML += `
+            <button onclick="selectQuickAmount(${amount},this)">
+                ₹${amount}
+            </button>
+        `;
+
+    });
+
+}
+function selectQuickAmount(amount,btn){
+
+    document.getElementById("cashReceived").value = amount;
+
+    document
+        .querySelectorAll("#quickAmountButtons button")
+        .forEach(b=>b.classList.remove("active"));
+
+    btn.classList.add("active");
+
+    calculateCash();
 
 }
 function calculateCash(){
