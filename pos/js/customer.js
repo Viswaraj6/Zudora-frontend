@@ -161,18 +161,19 @@ async function saveCustomer(){
 
     }
 
-    const res = await fetch(BASE_URL + "/pos/customers",{
+   const url = editCustomer
+    ? BASE_URL + "/pos/customers/" + editCustomer._id
+    : BASE_URL + "/pos/customers";
 
-        method:"POST",
+const method = editCustomer ? "PUT" : "POST";
 
-        headers:{
-            "Content-Type":"application/json"
-        },
-
-        body:JSON.stringify(customer)
-
-    });
-
+const res = await fetch(url,{
+    method,
+    headers:{
+        "Content-Type":"application/json"
+    },
+    body:JSON.stringify(customer)
+});
     const data = await res.json();
 
    if (data.success) {
