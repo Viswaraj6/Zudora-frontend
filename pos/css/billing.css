@@ -1408,7 +1408,7 @@ transform:translate(-50%,0);
 
     width:48px;
     height:48px;
-
+    margin-right:12px;
     display:flex;
     align-items:center;
     justify-content:center;
