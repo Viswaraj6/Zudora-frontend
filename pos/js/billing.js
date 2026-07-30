@@ -1263,56 +1263,33 @@ function closeCashScreen() {
     document.getElementById("paymentPanel").style.display = "block";
 
 }
-function calculateCash() {
+function calculateCash(){
 
-    const total = parseFloat(
-        document.getElementById("paymentGrandTotal").innerText
-    ) || 0;
+    const total = parseFloat(document.getElementById("paymentGrandTotal").innerText) || 0;
 
-    const received = parseFloat(
-        document.getElementById("cashReceived").value
-    ) || 0;
+    const received = parseFloat(document.getElementById("cashReceived").value) || 0;
 
     const result = document.getElementById("cashResult");
 
-    if (received === 0) {
-        result.innerHTML = "";
-        return;
+    if(received < total){
+
+        result.innerHTML =
+        `Next Payment (₹${(total-received).toFixed(0)} Remaining)`;
+
     }
 
-    if (received < total) {
+    else if(received > total){
 
-        const balance = total - received;
+        result.innerHTML =
+        `Save Bill (Return ₹${(received-total).toFixed(0)})`;
 
-        result.innerHTML = `
-            <h3>Balance Due</h3>
-            <h2>₹${balance}</h2>
+    }
 
-            <button class="save-btn" onclick="nextPayment()">
-                Next Payment →
-            </button>
-        `;
+    else{
 
-    } else if (received === total) {
+        result.innerHTML =
+        `Save Bill`;
 
-        result.innerHTML = `
-            <button class="save-btn" onclick="saveBill()">
-                Save Bill
-            </button>
-        `;
-
-    } else {
-
-        const change = received - total;
-
-        result.innerHTML = `
-            <h3>Change Return</h3>
-            <h2 style="color:green;">₹${change}</h2>
-
-            <button class="save-btn" onclick="saveBill()">
-                Save Bill
-            </button>
-        `;
     }
 
 }
