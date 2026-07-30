@@ -1183,8 +1183,14 @@ if (window.innerWidth <= 800) {
 }
 function editSelectedCustomer(){
 
-    window.location.href = "customer.html";
+    if(!selectedCustomer) return;
 
+    localStorage.setItem(
+        "editCustomer",
+        JSON.stringify(selectedCustomer)
+    );
+
+    window.location.href = "customer.html";
 }
 
 function clearSelectedCustomer(){
