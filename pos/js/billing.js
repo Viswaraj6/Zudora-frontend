@@ -1168,11 +1168,11 @@ function loadSelectedCustomer(){
 
    const box = document.getElementById("selectedCustomerBox");
 
-if (window.innerWidth <= 768) {
+if (window.innerWidth <= 800) {
 
     box.classList.remove("hidden");
     box.classList.add("show");
-if (window.innerWidth <= 768) {
+if (window.innerWidth <= 800) {
     document.querySelector(".customer-btn").style.display = "none";
 }
 } else {
