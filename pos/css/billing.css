@@ -1132,11 +1132,15 @@ background:#0f6d59;
        margin:0px;
     } 
    .mobile-payment-header{
+     position:sticky;
+    top:0;
+        z-index:100;
+       border-bottom:1px solid #eee;
         display: flex;
         align-items: center;
         gap: 15px;
         padding: 15px;
-        border-bottom: 1px solid #ddd;
+       
         background: #fff;
     }
 
@@ -1179,6 +1183,32 @@ background:#0f6d59;
     z-index:9999;
 
     background:#fff;
+
+}
+ .payment-box{
+
+    display:flex;
+
+    flex-direction:column;
+
+    height:100%;
+
+}
+ .save-btn{
+
+    position:sticky;
+
+    bottom:0;
+
+    width:100%;
+
+    border-radius:0;
+
+    margin-top:auto;
+
+    height:65px;
+
+    font-size:18px;
 
 }
 .cart-body{
