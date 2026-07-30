@@ -1135,10 +1135,10 @@ background:#0f6d59;
 
 }
 .cart-body{
+    flex:1;
+    min-height:0px;
 
-    min-height:250px;
-
-    max-height:350px;
+   
 
     overflow-y:auto;
 
