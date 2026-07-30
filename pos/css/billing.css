@@ -564,7 +564,7 @@ transition:.25s;
 background:#0f6d59;
 
 }
-@media (min-width:769px){
+@media (min-width:800px){
 
     #mobilePaymentBtn{
         display:none !important;
