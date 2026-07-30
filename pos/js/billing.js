@@ -32,7 +32,11 @@ window.onload = () => {
     .getElementById("custMobile")
     .addEventListener("input", validateMobile);
     
+    const savedCart = JSON.parse(localStorage.getItem("cart"));
 
+    if (savedCart) {
+    cart = savedCart;
+    }
     loadSelectedCustomer();
     renderCart();
 };
