@@ -178,15 +178,19 @@ const res = await fetch(url,{
 
    if (data.success) {
 
-    // Newly created customer-ஐ select பண்ணு
     localStorage.setItem(
         "selectedCustomer",
         JSON.stringify(data.customer)
     );
 
-    alert("Customer Added Successfully");
+    localStorage.removeItem("editCustomer");
 
-    // Billing page-க்கு திரும்பு
+    alert(
+        editCustomer
+            ? "Customer Updated Successfully"
+            : "Customer Added Successfully"
+    );
+
     window.location.href = "billing.html";
 
 } else {
