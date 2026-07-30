@@ -1238,8 +1238,13 @@ function openCashPayment() {
 
         document.getElementById("cashScreen").style.display = "flex";
 
-        document.getElementById("cashDueAmount").innerText =
-            "₹" + document.getElementById("paymentGrandTotal").innerText;
+        const total = document.getElementById("paymentGrandTotal").innerText;
+
+document.getElementById("cashReceived").value = total;
+
+generateQuickAmounts(parseFloat(total));
+
+calculateCash();
 
         document.getElementById("cashReceived").value = "";
 
