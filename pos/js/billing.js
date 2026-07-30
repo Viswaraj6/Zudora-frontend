@@ -901,7 +901,7 @@ function openCheckout(){
 
 }
 function backToCart(){
-
+     document.querySelector(".header").style.display = "flex";
     document.getElementById("paymentPanel").style.display = "none";
 
     document.getElementById("cartPanel").style.display = "flex";
