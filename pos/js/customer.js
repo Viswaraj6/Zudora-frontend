@@ -42,6 +42,7 @@ function loadEditCustomer(){
     document.getElementById("noCustomerMsg").style.display = "none";
     document.getElementById("createCustomerBtn").style.display = "none";
 // Hide search & customer list
+    document.getElementById("pageTitle").innerText = "Edit Customer";
    document.getElementById("customerSearch").style.display = "none";
     document.getElementById("customerList").style.display = "none";
     document.getElementById("custName").value = customer.name || "";
