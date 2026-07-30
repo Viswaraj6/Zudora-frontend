@@ -1312,24 +1312,22 @@ function calculateCash(){
 
     if(received < total){
 
-        message.innerHTML =
-        `<span class="cash-remaining">
-            Remaining ₹${(total-received).toFixed(0)}
+    message.innerHTML = `
+        <span class="cash-remaining">
+            Next Payment • Remaining ₹${(total-received).toFixed(0)}
         </span>`;
 
-    }
-    else if(received > total){
+}
+else if(received > total){
 
-        message.innerHTML =
-        `<span class="cash-return">
+    message.innerHTML = `
+        <span class="cash-return">
             Return ₹${(received-total).toFixed(0)}
         </span>`;
 
-    }
-    else{
+}
+else{
 
-        message.innerHTML = "";
-
-    }
+    message.innerHTML = "";
 
 }
