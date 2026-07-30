@@ -102,7 +102,9 @@ html{
     font-weight:700;
     color:#14866d;
 }
-
+.mobile-payment-header{
+    display: none;
+}
 .pos{
     font-size:30px;
     color:#444;
