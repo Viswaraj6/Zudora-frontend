@@ -1275,13 +1275,29 @@ background:#0f6d59;
 
     #cashResult{
 
-        margin-top:20px;
+    margin-top:30px;
 
-        font-size:22px;
+    width:100%;
 
-        font-weight:bold;
+    height:55px;
 
-    }
+    background:#16a085;
+
+    color:#fff;
+
+    border-radius:10px;
+
+    display:flex;
+
+    align-items:center;
+
+    justify-content:center;
+
+    font-size:18px;
+
+    font-weight:bold;
+
+}
    .mobile-payment-header{
      position:sticky;
     top:0;
