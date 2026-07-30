@@ -894,7 +894,7 @@ function openCheckout(){
     if(window.innerWidth > 800){
         return;
     }
-
+     document.querySelector(".header").style.display = "none";
     document.getElementById("cartPanel").style.display = "none";
 
     document.getElementById("paymentPanel").style.display = "block";
