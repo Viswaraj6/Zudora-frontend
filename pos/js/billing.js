@@ -1310,12 +1310,14 @@ function calculateCash(){
 
     result.innerHTML = "Save Bill";
 
-    if(received < total){
+   if(received < total){
 
     message.innerHTML = `
         <span class="cash-remaining">
             Next Payment • Remaining ₹${(total-received).toFixed(0)}
         </span>`;
+
+    result.innerHTML = "Next Payment ➜";
 
 }
 else if(received > total){
@@ -1325,10 +1327,14 @@ else if(received > total){
             Return ₹${(received-total).toFixed(0)}
         </span>`;
 
+    result.innerHTML = "Save Bill";
+
 }
 else{
 
     message.innerHTML = "";
+
+    result.innerHTML = "Save Bill";
 
 }
 }
