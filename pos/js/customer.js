@@ -1,6 +1,7 @@
 const BASE_URL = "https://fark618-backend.onrender.com";
 
 let customers = [];
+let editCustomer = null;
 const customerList = document.getElementById("customerList");
 const searchInput = document.getElementById("customerSearch");
 
