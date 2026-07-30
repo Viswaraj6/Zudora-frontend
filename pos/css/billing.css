@@ -16,6 +16,11 @@ html{
 
 
 }
+.payment-screen{
+
+    display:none;
+
+}
 .selected-customer{
     display:none !important;
 }
@@ -1131,6 +1136,103 @@ background:#0f6d59;
         display:flex !important;
        margin:0px;
     } 
+ .payment-screen{
+
+        position:fixed;
+
+        top:0;
+        left:0;
+        right:0;
+        bottom:0;
+
+        width:100%;
+        height:100vh;
+
+        background:#fff;
+
+        z-index:10000;
+
+        display:none;
+
+        flex-direction:column;
+
+    }
+
+    .payment-top{
+
+        display:flex;
+
+        align-items:center;
+
+        gap:15px;
+
+        padding:15px;
+
+        border-bottom:1px solid #eee;
+
+    }
+
+    .payment-top button{
+
+        border:none;
+
+        background:none;
+
+        font-size:22px;
+
+        cursor:pointer;
+
+    }
+
+    .payment-body{
+
+        padding:20px;
+
+    }
+
+    .payment-body h3{
+
+        margin:15px 0 8px;
+
+    }
+
+    #cashDueAmount{
+
+        font-size:34px;
+
+        font-weight:bold;
+
+        color:#2196F3;
+
+        margin-bottom:25px;
+
+    }
+
+    #cashReceived{
+
+        width:100%;
+
+        height:55px;
+
+        font-size:24px;
+
+        padding:10px;
+
+        border:1px solid #ddd;
+
+        border-radius:10px;
+
+    }
+
+    #cashResult{
+
+        margin-top:20px;
+
+        font-size:22px;
+
+        font-weight:bold;
+
+    }
    .mobile-payment-header{
      position:sticky;
     top:0;
