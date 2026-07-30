@@ -1136,7 +1136,7 @@ background:#0f6d59;
 }
 .cart-body{
     flex:1;
-    min-height:0px;
+   
 
    
 
@@ -1256,11 +1256,13 @@ background:#0f6d59;
     }
 
     .left-panel{
-
-        height:auto;
-
+        display:flex;
+        flex-direction:column;
+        height:calc(100vh - 120px);
     }
-
+ .cart-body{
+    padding-bottom:80px;
+}
     .right-panel{
 
         position:static;
