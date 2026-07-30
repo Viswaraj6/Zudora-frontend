@@ -1174,6 +1174,7 @@ if (window.innerWidth <= 768) {
 
     box.classList.add("hidden");
 }
+    renderCart();
 }
 function editSelectedCustomer(){
 
