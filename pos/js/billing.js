@@ -1240,16 +1240,14 @@ function openCashPayment() {
 
         const total = document.getElementById("paymentGrandTotal").innerText;
 
+const total = document.getElementById("paymentGrandTotal").innerText;
+
 document.getElementById("cashReceived").value = total;
 
 generateQuickAmounts(parseFloat(total));
 
 calculateCash();
-
-        document.getElementById("cashReceived").value = "";
-
-        document.getElementById("cashResult").innerHTML = "";
-
+        
         return;
     }
 
