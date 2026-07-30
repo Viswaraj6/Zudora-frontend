@@ -41,7 +41,9 @@ function loadEditCustomer(){
 
     document.getElementById("noCustomerMsg").style.display = "none";
     document.getElementById("createCustomerBtn").style.display = "none";
-
+// Hide search & customer list
+   document.getElementById("customerSearch").style.display = "none";
+    document.getElementById("customerList").style.display = "none";
     document.getElementById("custName").value = customer.name || "";
     document.getElementById("custMobile").value = customer.mobile || "";
     document.getElementById("custEmail").value = customer.email || "";
