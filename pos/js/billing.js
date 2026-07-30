@@ -1244,7 +1244,7 @@ const total = document.getElementById("paymentGrandTotal").innerText;
 
 document.getElementById("cashReceived").value = total;
 
-generateQuickAmounts(parseFloat(total));
+//generateQuickAmounts(parseFloat(total));
 
 calculateCash();
         
