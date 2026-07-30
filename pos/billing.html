@@ -576,7 +576,32 @@
     </div>
 
 </div>
-        
+   <!-- Cash Payment Screen -->
+<div id="cashScreen" class="payment-screen">
+
+    <div class="payment-top">
+        <button onclick="closeCashScreen()">←</button>
+        <h2>Cash Payment</h2>
+    </div>
+
+    <div class="payment-body">
+
+        <h3>Amount Due</h3>
+        <div id="cashDueAmount">₹0</div>
+
+        <h3>Received Amount</h3>
+
+        <input
+            type="number"
+            id="cashReceived"
+            placeholder="Enter Amount"
+            oninput="calculateCash()">
+
+        <div id="cashResult"></div>
+
+    </div>
+
+</div>     
 </main>
      </div>
 <script src="https://unpkg.com/html5-qrcode@2.3.8/html5-qrcode.min.js"></script>
