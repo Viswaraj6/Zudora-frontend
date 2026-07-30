@@ -217,3 +217,10 @@ function toggleCustomerForm(){
     
 
 }
+function goBack(){
+
+    localStorage.removeItem("editCustomer");
+
+    window.location.href = "billing.html";
+
+}
