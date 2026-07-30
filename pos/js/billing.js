@@ -900,6 +900,13 @@ function openCheckout(){
     document.getElementById("paymentPanel").style.display = "block";
 
 }
+function backToCart(){
+
+    document.getElementById("paymentPanel").style.display = "none";
+
+    document.getElementById("cartPanel").style.display = "flex";
+
+}
 function toggleCustomerForm(){
 document.getElementById("noCustomerMsg").style.display = "none";
 
