@@ -1306,25 +1306,29 @@ function calculateCash(){
     const received = parseFloat(document.getElementById("cashReceived").value) || 0;
 
     const result = document.getElementById("cashResult");
+    const message = document.getElementById("cashMessage");
+
+    result.innerHTML = "Save Bill";
 
     if(received < total){
 
-        result.innerHTML =
-        `Next Payment (₹${(total-received).toFixed(0)} Remaining)`;
+        message.innerHTML =
+        `<span class="cash-remaining">
+            Remaining ₹${(total-received).toFixed(0)}
+        </span>`;
 
     }
-
     else if(received > total){
 
-        result.innerHTML =
-        `Save Bill (Return ₹${(received-total).toFixed(0)})`;
+        message.innerHTML =
+        `<span class="cash-return">
+            Return ₹${(received-total).toFixed(0)}
+        </span>`;
 
     }
-
     else{
 
-        result.innerHTML =
-        `Save Bill`;
+        message.innerHTML = "";
 
     }
 
