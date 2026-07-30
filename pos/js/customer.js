@@ -6,6 +6,7 @@ const customerList = document.getElementById("customerList");
 const searchInput = document.getElementById("customerSearch");
 
 loadCustomers();
+loadEditCustomer();
 async function loadCustomers(){
 
     try{
