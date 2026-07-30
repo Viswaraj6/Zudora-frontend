@@ -1229,3 +1229,32 @@ if (cart.length > 0) {
     document.querySelector(".customer-btn").style.display = "none";
 }
 }
+function openCashPayment() {
+
+    // Mobile மட்டும்
+    if (window.innerWidth <= 800) {
+
+        document.getElementById("paymentPanel").style.display = "none";
+
+        document.getElementById("cashScreen").style.display = "flex";
+
+        document.getElementById("cashDueAmount").innerText =
+            "₹" + document.getElementById("paymentGrandTotal").innerText;
+
+        document.getElementById("cashReceived").value = "";
+
+        document.getElementById("cashResult").innerHTML = "";
+
+        return;
+    }
+
+    // Desktop (Next Step)
+}
+
+function closeCashScreen() {
+
+    document.getElementById("cashScreen").style.display = "none";
+
+    document.getElementById("paymentPanel").style.display = "block";
+
+}
