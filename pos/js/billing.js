@@ -1258,3 +1258,56 @@ function closeCashScreen() {
     document.getElementById("paymentPanel").style.display = "block";
 
 }
+function calculateCash() {
+
+    const total = parseFloat(
+        document.getElementById("paymentGrandTotal").innerText
+    ) || 0;
+
+    const received = parseFloat(
+        document.getElementById("cashReceived").value
+    ) || 0;
+
+    const result = document.getElementById("cashResult");
+
+    if (received === 0) {
+        result.innerHTML = "";
+        return;
+    }
+
+    if (received < total) {
+
+        const balance = total - received;
+
+        result.innerHTML = `
+            <h3>Balance Due</h3>
+            <h2>₹${balance}</h2>
+
+            <button class="save-btn" onclick="nextPayment()">
+                Next Payment →
+            </button>
+        `;
+
+    } else if (received === total) {
+
+        result.innerHTML = `
+            <button class="save-btn" onclick="saveBill()">
+                Save Bill
+            </button>
+        `;
+
+    } else {
+
+        const change = received - total;
+
+        result.innerHTML = `
+            <h3>Change Return</h3>
+            <h2 style="color:green;">₹${change}</h2>
+
+            <button class="save-btn" onclick="saveBill()">
+                Save Bill
+            </button>
+        `;
+    }
+
+}
