@@ -1136,6 +1136,31 @@ background:#0f6d59;
         display:flex !important;
        margin:0px;
     } 
+ #cashMessage{
+
+    height:24px;
+
+    margin:10px 0;
+
+    text-align:center;
+
+    font-size:15px;
+
+    font-weight:600;
+
+}
+
+.cash-return{
+
+    color:#16a34a;
+
+}
+
+.cash-remaining{
+
+    color:#dc2626;
+
+}
  .quick-amounts{
 
     display:flex;
