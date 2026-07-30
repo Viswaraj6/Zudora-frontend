@@ -1136,6 +1136,55 @@ background:#0f6d59;
         display:flex !important;
        margin:0px;
     } 
+ .quick-amounts{
+
+    display:flex;
+
+    gap:10px;
+
+    overflow-x:auto;
+
+    margin:20px 0;
+
+    padding-bottom:8px;
+
+}
+
+.quick-amounts::-webkit-scrollbar{
+
+    display:none;
+
+}
+
+.quick-amounts button{
+
+    min-width:80px;
+
+    height:42px;
+
+    border:none;
+
+    border-radius:10px;
+
+    background:#f3f3f3;
+
+    font-size:15px;
+
+    font-weight:600;
+
+    cursor:pointer;
+
+    flex-shrink:0;
+
+}
+
+.quick-amounts button.active{
+
+    background:#16a085;
+
+    color:#fff;
+
+}
  .payment-screen{
 
         position:fixed;
