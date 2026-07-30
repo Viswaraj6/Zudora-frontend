@@ -1406,18 +1406,31 @@ transform:translate(-50%,0);
 
 .menu-btn{
 
-    background:none;
+    width:48px;
+    height:48px;
 
-    border:none;
+    display:flex;
+    align-items:center;
+    justify-content:center;
 
-    color:#fff;
+    background:#f5f5f5;
+    border:1px solid #ddd;
+    border-radius:10px;
 
-    font-size:24px;
+    color:#333;
+
+    font-size:28px;
+    font-weight:bold;
 
     cursor:pointer;
 
+    transition:.2s;
 }
 
+.menu-btn:hover{
+    background:#16a085;
+    color:#fff;
+}
 .menu{
 
     flex:1;
