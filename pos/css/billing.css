@@ -1129,6 +1129,26 @@ background:#0f6d59;
         display:flex !important;
        margin:0px;
     } 
+   .mobile-payment-header{
+        display: flex;
+        align-items: center;
+        gap: 15px;
+        padding: 15px;
+        border-bottom: 1px solid #ddd;
+        background: #fff;
+    }
+
+    .mobile-payment-header button{
+        border: none;
+        background: none;
+        font-size: 22px;
+        cursor: pointer;
+    }
+
+    .mobile-payment-header h3{
+        margin: 0;
+        font-size: 18px;
+    }
 .mobile-payment-btn{
 
     display:block;
