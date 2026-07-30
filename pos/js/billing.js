@@ -1238,7 +1238,7 @@ function openCashPayment() {
 
         document.getElementById("cashScreen").style.display = "flex";
 
-        const total = document.getElementById("paymentGrandTotal").innerText;
+      
 
 const total = document.getElementById("paymentGrandTotal").innerText;
 
