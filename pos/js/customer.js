@@ -204,7 +204,7 @@ const res = await fetch(url,{
 }
 function toggleCustomerForm(){
 
-    
+    if(editCustomer) return;
 
     document.getElementById("customerCreate")
         .classList.remove("hidden");
@@ -215,8 +215,6 @@ function toggleCustomerForm(){
 
     document.getElementById("customerForm")
         .classList.remove("hidden");
-    
-
 }
 function goBack(){
 
