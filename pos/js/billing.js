@@ -890,7 +890,14 @@ function selectCustomer(customer){
 }
 function openCheckout(){
 
-    alert("Checkout Screen Coming Next 🚀");
+    // Desktop
+    if(window.innerWidth > 800){
+        return;
+    }
+
+    document.getElementById("cartPanel").style.display = "none";
+
+    document.getElementById("paymentPanel").style.display = "block";
 
 }
 function toggleCustomerForm(){
