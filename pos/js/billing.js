@@ -32,8 +32,9 @@ window.onload = () => {
     .getElementById("custMobile")
     .addEventListener("input", validateMobile);
     
-renderCart();
+
     loadSelectedCustomer();
+    renderCart();
 };
 async function loadProducts() {
     try {
