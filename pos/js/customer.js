@@ -26,6 +26,28 @@ renderCustomers(customers);
     }
 
 }
+function loadEditCustomer(){
+
+    const customer = JSON.parse(localStorage.getItem("editCustomer"));
+
+    if(!customer) return;
+
+    editCustomer = customer;
+
+    document.getElementById("customerDropdown").classList.remove("hidden");
+    document.getElementById("customerCreate").classList.remove("hidden");
+    document.getElementById("customerForm").classList.remove("hidden");
+
+    document.getElementById("noCustomerMsg").style.display = "none";
+    document.getElementById("createCustomerBtn").style.display = "none";
+
+    document.getElementById("custName").value = customer.name || "";
+    document.getElementById("custMobile").value = customer.mobile || "";
+    document.getElementById("custEmail").value = customer.email || "";
+    document.getElementById("custAddress").value = customer.address || "";
+
+    document.getElementById("saveCustomerBtn").innerText = "Update Customer";
+}
 function renderCustomers(data){
 
     customerList.innerHTML = "";
