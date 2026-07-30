@@ -232,7 +232,7 @@ function addToCart(product,size){
     console.log(cart);
 console.log(product);
 console.log(size);
-
+localStorage.setItem("cart", JSON.stringify(cart));
 renderCart();
 
 showScanToast(product,size);
