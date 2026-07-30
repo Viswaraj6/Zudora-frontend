@@ -588,19 +588,19 @@
 
     <div class="payment-body">
 
-        <h3>Amount Due</h3>
-        <div id="cashDueAmount">₹0</div>
+        <h3>Cash Received</h3>
 
-        <h3>Received Amount</h3>
+<input
+    type="number"
+    id="cashReceived"
+    oninput="calculateCash()">
 
-        <input
-            type="number"
-            id="cashReceived"
-            placeholder="Enter Amount"
-            oninput="calculateCash()">
+<div id="quickAmountButtons" class="quick-amounts">
 
-        <div id="cashResult"></div>
+</div>
 
+<div id="cashResult"></div>
+        
     </div>
 
 </div>     
