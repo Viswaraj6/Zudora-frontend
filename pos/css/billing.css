@@ -254,7 +254,7 @@ html{
     flex-shrink:0;
 }
 /* Hide Add Customer button only on Desktop */
-@media (min-width:769px){
+@media (min-width:800px){
 
     .customer-btn{
 
