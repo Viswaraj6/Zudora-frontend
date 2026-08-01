@@ -66,6 +66,7 @@ html{
     align-items:center;
 
     gap:4px;
+  position:relative;
 
 }
 
@@ -76,10 +77,21 @@ html{
     font-weight:700;
 
 }
+#cashBtn .pay-value{
 
-.pay-value{
+    position:absolute;
+
+    right:18px;
 
     font-weight:700;
+
+    font-size:18px;
+
+}
+
+#cashBtn .pay-icon{
+
+    font-weight:600;
 
 }
 .payment-screen{
