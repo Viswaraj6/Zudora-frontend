@@ -1411,3 +1411,14 @@ function renderPaymentHistory(){
     `;
 
 }
+function editCashPayment(){
+
+    document.getElementById("paymentPanel").style.display = "none";
+
+    document.getElementById("cashScreen").style.display = "flex";
+
+    document.getElementById("cashReceived").value = cashPaid;
+
+    calculateCash();
+
+}
