@@ -1365,3 +1365,14 @@ function cashButtonAction(){
     }
 
 }
+function openRemainingPayment(){
+
+    document.getElementById("cashScreen").style.display = "none";
+
+    document.getElementById("paymentPanel").style.display = "block";
+
+    // Grand Total change pannatheenga
+
+    renderPaymentHistory();
+
+}
