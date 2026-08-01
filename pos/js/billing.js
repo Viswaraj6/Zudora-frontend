@@ -1382,30 +1382,23 @@ function renderPaymentHistory(){
 
     const cashBtn = document.getElementById("cashBtn");
 
-const cash = paymentHistory.find(p => p.mode==="Cash");
+    const cash = paymentHistory.find(p => p.mode === "Cash");
 
-if(cash){
+    if(cash){
 
-    cashBtn.innerHTML = `
-        💵 Cash
-        <br>
-        <small>₹${cash.amount}</small>
-    `;
+        cashBtn.innerHTML = `
+            <span class="pay-icon">💵 Cash</span>
+            <span class="pay-value">₹${cash.amount}</span>
+        `;
 
-}else{
+    }else{
 
-  cashBtn.innerHTML = `
-    <span class="pay-icon">
-        💵 Cash
-    </span>
+        cashBtn.innerHTML = `
+            <span class="pay-icon">💵 Cash</span>
+        `;
 
-    <span class="pay-value">
-        ₹${cash.amount}
-    </span>
-`;
+    }
 
-}
-    
     document.getElementById("remainingLabel").innerHTML = `
         <div class="remaining-box">
             <span>Remaining</span>
