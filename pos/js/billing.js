@@ -1355,7 +1355,7 @@ function cashButtonAction(){
     paymentHistory = paymentHistory.filter(p => p.mode !== "Cash");
 
     paymentHistory.push({
-        mode:"Cash",
+        mode: currentPaymentMode,
         amount:cashPaid
     });
 
