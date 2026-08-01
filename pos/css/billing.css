@@ -53,6 +53,21 @@ html{
     font-weight:700;
 
 }
+#cashBtn{
+
+    display:flex;
+
+    justify-content:space-between;
+
+    align-items:center;
+
+}
+
+.pay-value{
+
+    font-weight:700;
+
+}
 .payment-screen{
 
     display:none;
