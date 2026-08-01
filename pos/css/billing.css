@@ -55,28 +55,16 @@ html{
 }
 #cashBtn{
 
-    height:70px;
-
     display:flex;
-
-    flex-direction:column;
-
-    justify-content:center;
 
     align-items:center;
 
-    gap:4px;
-  position:relative;
+    justify-content:center;
+
+    position:relative;
 
 }
 
-#cashBtn small{
-
-    font-size:18px;
-
-    font-weight:700;
-
-}
 #cashBtn .pay-value{
 
     position:absolute;
@@ -92,6 +80,13 @@ html{
 #cashBtn .pay-icon{
 
     font-weight:600;
+
+}
+#cashBtn small{
+
+    font-size:18px;
+
+    font-weight:700;
 
 }
 .payment-screen{
