@@ -1244,10 +1244,12 @@ function openCashPayment() {
 
       
 
-const total = document.getElementById("paymentGrandTotal").innerText;
+const total =
+    parseFloat(document.getElementById("paymentGrandTotal").innerText);
 
-document.getElementById("cashReceived").value = total;
-
+document.getElementById("cashReceived").value =
+    cashPaid > 0 ? cashPaid : total;
+        
 generateQuickAmounts(parseFloat(total));
 
 calculateCash();
