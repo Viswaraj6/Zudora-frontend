@@ -1313,7 +1313,7 @@ function calculateCash(){
   const total =
     remainingAmount > 0
         ? remainingAmount
-        : parseFloat(document.getElementById("paymentGrandTotal").innerText); || 0;
+        : parseFloat(document.getElementById("paymentGrandTotal").innerText); 
 
     const received = parseFloat(document.getElementById("cashReceived").value) || 0;
     receivedAmount = received;
