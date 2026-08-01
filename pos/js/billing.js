@@ -9,6 +9,7 @@ let cart = [];
 let paymentHistory = [];
 let receivedAmount = 0;
 let remainingAmount = 0;
+let cashPaid = 0;
 let html5QrCode = null;
 let scanLock = false;
 let selectedCustomer = null;
