@@ -1311,10 +1311,7 @@ function selectQuickAmount(amount,btn){
 }
 function calculateCash(){
 
-  const total =
-    remainingAmount > 0
-        ? remainingAmount
-        : parseFloat(document.getElementById("paymentGrandTotal").innerText); 
+const total = currentPaymentTotal;
 
     const received = parseFloat(document.getElementById("cashReceived").value) || 0;
    receivedAmount = received;
