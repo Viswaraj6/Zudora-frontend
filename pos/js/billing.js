@@ -1234,33 +1234,35 @@ if (cart.length > 0) {
     document.querySelector(".customer-btn").style.display = "none";
 }
 }
-function openCashPayment() {
+function openPayment(mode){
 
-    // Mobile மட்டும்
-    if (window.innerWidth <= 800) {
+    currentPaymentMode = mode;
+
+    if(window.innerWidth <= 800){
 
         document.getElementById("paymentPanel").style.display = "none";
-
         document.getElementById("cashScreen").style.display = "flex";
 
-      
+        document.getElementById("paymentTitle").innerText =
+            mode + " Payment";
 
-const total =
-    parseFloat(document.getElementById("paymentGrandTotal").innerText);
+        document.querySelector(".payment-body h3").innerText =
+            mode + " Received";
 
-document.getElementById("cashReceived").value =
-    cashPaid > 0 ? cashPaid : total;
-        
-generateQuickAmounts(parseFloat(total));
+        const amount =
+            paymentHistory.find(p => p.mode === mode)?.amount
+            || remainingAmount
+            || parseFloat(document.getElementById("paymentGrandTotal").innerText);
 
-calculateCash();
-        
-        return;
+        document.getElementById("cashReceived").value = amount;
+
+        generateQuickAmounts(amount);
+
+        calculateCash();
+
     }
 
-    // Desktop (Next Step)
 }
-
 function closeCashScreen() {
 
     document.getElementById("cashScreen").style.display = "none";
