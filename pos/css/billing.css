@@ -54,17 +54,14 @@ html{
 
 }
 #cashBtn{
-
-    display:flex;
-
-    align-items:center;
-
-    justify-content:center;
-
     position:relative;
 
-}
+    display:flex;
+    justify-content:center;
+    align-items:center;
 
+    height:46px;
+}
 #cashBtn .pay-value{
 
     position:absolute;
