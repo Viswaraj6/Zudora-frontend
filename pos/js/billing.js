@@ -1378,30 +1378,24 @@ function openRemainingPayment(){
 }
 function renderPaymentHistory(){
 
-    const history = document.getElementById("paymentHistory");
+    const cashBtn = document.getElementById("cashBtn");
 
-    history.innerHTML = "";
+    const cash = paymentHistory.find(p => p.mode === "Cash");
 
-    paymentHistory.forEach(item=>{
+    if(cash){
 
-        if(item.mode === "Cash"){
+        cashBtn.innerHTML = `
+            💵 Cash
+            <span style="float:right">
+                ₹${cash.amount}
+            </span>
+        `;
 
-            history.innerHTML += `
-                <button class="pay-btn"
-                        onclick="editCashPayment()">
+    }else{
 
-                    💵 Cash
+        cashBtn.innerHTML = "💵 Cash";
 
-                    <span style="float:right">
-                        ₹${item.amount}
-                    </span>
-
-                </button>
-            `;
-
-        }
-
-    });
+    }
 
     document.getElementById("remainingLabel").innerHTML = `
         <div class="remaining-box">
