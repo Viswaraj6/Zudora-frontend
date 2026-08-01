@@ -1385,21 +1385,19 @@ function renderPaymentHistory(){
     if(cash){
 
         cashBtn.innerHTML = `
-            💵 Cash
-            <span style="float:right">
-                ₹${cash.amount}
-            </span>
+            <span>💵 Cash</span>
+            <span class="pay-value">₹${cash.amount}</span>
         `;
 
     }else{
 
-        cashBtn.innerHTML = "💵 Cash";
+        cashBtn.innerHTML = `💵 Cash`;
 
     }
 
     document.getElementById("remainingLabel").innerHTML = `
         <div class="remaining-box">
-            Remaining
+            <span>Remaining</span>
             <strong>₹${remainingAmount}</strong>
         </div>
     `;
