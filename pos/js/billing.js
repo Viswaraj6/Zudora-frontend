@@ -1345,21 +1345,20 @@ else{
 }
 function cashButtonAction(){
 
-    if(remainingAmount > 0){
+    cashPaid = receivedAmount;
 
-        paymentHistory.push({
-            mode:"Cash",
-            amount:receivedAmount
-        });
+    paymentHistory = paymentHistory.filter(p => p.mode !== "Cash");
+
+    paymentHistory.push({
+        mode:"Cash",
+        amount:cashPaid
+    });
+
+    if(remainingAmount > 0){
 
         openRemainingPayment();
 
     }else{
-
-        paymentHistory.push({
-            mode:"Cash",
-            amount:receivedAmount
-        });
 
         saveBill();
 
