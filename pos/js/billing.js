@@ -1402,8 +1402,30 @@ function renderPaymentHistory(){
 
     const cashBtn = document.getElementById("cashBtn");
 
+   
+    const cardBtn = document.getElementById("cardBtn");
+    const upiBtn = document.getElementById("upiBtn");
+    const creditBtn = document.getElementById("creditBtn");
     const cash = paymentHistory.find(p => p.mode === "Cash");
+    const card = paymentHistory.find(p => p.mode === "Card");
+    const upi = paymentHistory.find(p => p.mode === "UPI");
+    const credit = paymentHistory.find(p => p.mode === "Credit Note");
 
+    cashBtn.innerHTML = cash
+? `<span class="pay-icon">💵 Cash</span><span class="pay-value">₹${cash.amount}</span>`
+: `<span class="pay-icon">💵 Cash</span>`;
+
+cardBtn.innerHTML = card
+? `<span class="pay-icon">💳 Card</span><span class="pay-value">₹${card.amount}</span>`
+: `<span class="pay-icon">💳 Card</span>`;
+
+upiBtn.innerHTML = upi
+? `<span class="pay-icon">📱 UPI</span><span class="pay-value">₹${upi.amount}</span>`
+: `<span class="pay-icon">📱 UPI</span>`;
+
+creditBtn.innerHTML = credit
+? `<span class="pay-icon">🧾 Credit Note</span><span class="pay-value">₹${credit.amount}</span>`
+: `<span class="pay-icon">🧾 Credit Note</span>`;
     if(cash){
 
         cashBtn.innerHTML = `
@@ -1425,7 +1447,13 @@ function renderPaymentHistory(){
             <strong>₹${remainingAmount}</strong>
         </div>
     `;
+const saveBtn = document.getElementById("savePrintBtn");
 
+if (remainingAmount > 0) {
+    saveBtn.style.display = "none";
+} else {
+    saveBtn.style.display = "block";
+}
 }
 function editCashPayment(){
 
