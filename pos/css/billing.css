@@ -55,11 +55,25 @@ html{
 }
 #cashBtn{
 
+    height:70px;
+
     display:flex;
 
-    justify-content:space-between;
+    flex-direction:column;
+
+    justify-content:center;
 
     align-items:center;
+
+    gap:4px;
+
+}
+
+#cashBtn small{
+
+    font-size:18px;
+
+    font-weight:700;
 
 }
 
