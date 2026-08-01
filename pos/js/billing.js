@@ -1376,3 +1376,24 @@ function openRemainingPayment(){
     renderPaymentHistory();
 
 }
+function renderPaymentHistory(){
+
+    const history = document.getElementById("paymentHistory");
+
+    history.innerHTML = "";
+
+    paymentHistory.forEach(item=>{
+
+        history.innerHTML += `
+            <div class="paid-item">
+                ${item.mode}
+                <span>₹${item.amount}</span>
+            </div>
+        `;
+
+    });
+
+    document.getElementById("remainingLabel").innerHTML =
+        "Remaining ₹" + remainingAmount;
+
+}
