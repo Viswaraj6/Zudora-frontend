@@ -427,18 +427,32 @@
 
 <div id="remainingLabel"></div>
 
-<button id="cardBtn" class="pay-btn">
+<button
+    id="cardBtn"
+    class="pay-btn"
+    onclick="openPayment('Card')">
+
     💳 Card
+
 </button>
 
-<button id="upiBtn" class="pay-btn">
+<button
+    id="upiBtn"
+    class="pay-btn"
+    onclick="openPayment('UPI')">
+
     📱 UPI
+
 </button>
 
-<button id="creditBtn" class="pay-btn">
+<button
+    id="creditBtn"
+    class="pay-btn"
+    onclick="openPayment('Credit Note')">
+
     👛 Credit Note
-</button>
 
+</button>
 <button class="pay-btn">
     🔀 Split Payment
 </button>
