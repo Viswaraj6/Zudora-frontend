@@ -16,6 +16,43 @@ html{
 
 
 }
+.paid-item{
+
+    display:flex;
+
+    justify-content:space-between;
+
+    align-items:center;
+
+    margin:18px 0;
+
+    font-size:18px;
+
+    font-weight:600;
+
+}
+
+.remaining-box{
+
+    margin:20px 0 25px;
+
+    padding-top:15px;
+
+    border-top:1px solid #e5e5e5;
+
+    display:flex;
+
+    justify-content:space-between;
+
+    align-items:center;
+
+    color:#d32f2f;
+
+    font-size:18px;
+
+    font-weight:700;
+
+}
 .payment-screen{
 
     display:none;
