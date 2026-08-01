@@ -1307,7 +1307,8 @@ function calculateCash(){
     const total = parseFloat(document.getElementById("paymentGrandTotal").innerText) || 0;
 
     const received = parseFloat(document.getElementById("cashReceived").value) || 0;
-
+    receivedAmount = received;
+    remainingAmount = total - received;
     const result = document.getElementById("cashResult");
     const message = document.getElementById("cashMessage");
 
