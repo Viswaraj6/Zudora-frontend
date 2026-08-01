@@ -1384,12 +1384,22 @@ function renderPaymentHistory(){
 
     paymentHistory.forEach(item=>{
 
-        history.innerHTML += `
-            <div class="paid-item">
-                <span>💵 ${item.mode}</span>
-                <strong>₹${item.amount}</strong>
-            </div>
-        `;
+        if(item.mode === "Cash"){
+
+            history.innerHTML += `
+                <button class="pay-btn"
+                        onclick="editCashPayment()">
+
+                    💵 Cash
+
+                    <span style="float:right">
+                        ₹${item.amount}
+                    </span>
+
+                </button>
+            `;
+
+        }
 
     });
 
