@@ -66,12 +66,12 @@ html{
 
     position:absolute;
 
-    right:18px;
+    right:20px;
 
     font-weight:700;
 
     font-size:18px;
-  gap:28px;
+ 
 }
 
 #cashBtn .pay-icon{
