@@ -1386,14 +1386,18 @@ function renderPaymentHistory(){
 
         history.innerHTML += `
             <div class="paid-item">
-                ${item.mode}
-                <span>₹${item.amount}</span>
+                <span>💵 ${item.mode}</span>
+                <strong>₹${item.amount}</strong>
             </div>
         `;
 
     });
 
-    document.getElementById("remainingLabel").innerHTML =
-        "Remaining ₹" + remainingAmount;
+    document.getElementById("remainingLabel").innerHTML = `
+        <div class="remaining-box">
+            Remaining
+            <strong>₹${remainingAmount}</strong>
+        </div>
+    `;
 
 }
