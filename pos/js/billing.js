@@ -1394,7 +1394,15 @@ if(cash){
 
 }else{
 
-    cashBtn.innerHTML = `💵 Cash`;
+  cashBtn.innerHTML = `
+    <span class="pay-icon">
+        💵 Cash
+    </span>
+
+    <span class="pay-value">
+        ₹${cash.amount}
+    </span>
+`;
 
 }
     
