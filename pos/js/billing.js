@@ -1350,14 +1350,29 @@ else{
 }
 function cashButtonAction(){
 
-    cashPaid = receivedAmount;
+    const amount = receivedAmount;
 
-    paymentHistory = paymentHistory.filter(p => p.mode !== "Cash");
+    // Old entry remove
+    paymentHistory = paymentHistory.filter(
+        p => p.mode !== currentPaymentMode
+    );
 
+    // New entry
     paymentHistory.push({
         mode: currentPaymentMode,
-        amount:cashPaid
+        amount: amount
     });
+
+    // Remaining calculate
+    const paid = paymentHistory.reduce(
+        (t,p)=>t+p.amount,
+        0
+    );
+
+    const grandTotal =
+        parseFloat(document.getElementById("paymentGrandTotal").innerText);
+
+    remainingAmount = grandTotal - paid;
 
     if(remainingAmount > 0){
 
