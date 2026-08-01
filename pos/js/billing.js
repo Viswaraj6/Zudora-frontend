@@ -1254,7 +1254,7 @@ function openPayment(mode){
             paymentHistory.find(p => p.mode === mode)?.amount
             || remainingAmount
             || parseFloat(document.getElementById("paymentGrandTotal").innerText);
-
+            currentPaymentTotal = amount;
         document.getElementById("cashReceived").value = amount;
 
         generateQuickAmounts(amount);
