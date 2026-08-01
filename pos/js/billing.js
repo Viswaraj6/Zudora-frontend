@@ -1342,3 +1342,26 @@ else{
 
 }
 }
+function cashButtonAction(){
+
+    if(remainingAmount > 0){
+
+        paymentHistory.push({
+            mode:"Cash",
+            amount:receivedAmount
+        });
+
+        openRemainingPayment();
+
+    }else{
+
+        paymentHistory.push({
+            mode:"Cash",
+            amount:receivedAmount
+        });
+
+        saveBill();
+
+    }
+
+}
