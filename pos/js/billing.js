@@ -1252,25 +1252,32 @@ function openPayment(mode){
 
         let amount;
 
-if (remainingAmount > 0) {
+let amount;
 
-    // Split payment நடக்கும்போது எப்போதும் remaining amount
+const existingPayment =
+    paymentHistory.find(p => p.mode === mode);
+
+if (existingPayment) {
+
+    // Already paid -> show previous value
+    amount = existingPayment.amount;
+
+} else if (remainingAmount > 0) {
+
+    // New payment mode -> show remaining
     amount = remainingAmount;
 
 } else {
 
-    // முதல் payment அல்லது edit
-    amount =
-        paymentHistory.find(p => p.mode === mode)?.amount ||
-        parseFloat(document.getElementById("paymentGrandTotal").innerText);
+    // First payment
+    amount = parseFloat(
+        document.getElementById("paymentGrandTotal").innerText
+    );
 
 }
 
 currentPaymentTotal = amount;
 document.getElementById("cashReceived").value = amount;
-        
-            currentPaymentTotal = amount;
-        document.getElementById("cashReceived").value = amount;
 
         generateQuickAmounts(amount);
 
