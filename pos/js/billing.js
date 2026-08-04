@@ -1250,10 +1250,25 @@ function openPayment(mode){
         document.querySelector(".payment-body h3").innerText =
             mode + " Received";
 
-        const amount =
-            paymentHistory.find(p => p.mode === mode)?.amount
-            || remainingAmount
-            || parseFloat(document.getElementById("paymentGrandTotal").innerText);
+        let amount;
+
+if (remainingAmount > 0) {
+
+    // Split payment நடக்கும்போது எப்போதும் remaining amount
+    amount = remainingAmount;
+
+} else {
+
+    // முதல் payment அல்லது edit
+    amount =
+        paymentHistory.find(p => p.mode === mode)?.amount ||
+        parseFloat(document.getElementById("paymentGrandTotal").innerText);
+
+}
+
+currentPaymentTotal = amount;
+document.getElementById("cashReceived").value = amount;
+        
             currentPaymentTotal = amount;
         document.getElementById("cashReceived").value = amount;
 
