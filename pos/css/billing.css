@@ -53,33 +53,43 @@ html{
     font-weight:700;
 
 }
-#cashBtn{
-    position:relative;
+#cashBtn,
+#cardBtn,
+#upiBtn,
+#creditBtn{
 
+    position:relative;
     display:flex;
     justify-content:center;
     align-items:center;
-
     height:46px;
+
 }
-#cashBtn .pay-value{
+
+#cashBtn .pay-value,
+#cardBtn .pay-value,
+#upiBtn .pay-value,
+#creditBtn .pay-value{
 
     position:absolute;
-
     right:20px;
-
     font-weight:700;
-
     font-size:18px;
- 
+
 }
 
-#cashBtn .pay-icon{
+#cashBtn .pay-icon,
+#cardBtn .pay-icon,
+#upiBtn .pay-icon,
+#creditBtn .pay-icon{
 
     font-weight:600;
 
 }
-#cashBtn small{
+#cashBtn small,
+#cardBtn small,
+#upiBtn small,
+#creditBtn small{
 
     font-size:18px;
 
