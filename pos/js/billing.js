@@ -1369,17 +1369,26 @@ function cashButtonAction(){
 
     const amount = receivedAmount;
 
-    // Old entry remove
+   const alreadyPaid = paymentHistory.find(
+    p => p.mode === currentPaymentMode
+);
+
+if (alreadyPaid && remainingAmount > 0) {
+
+    alreadyPaid.amount = amount;
+
+} else {
+
     paymentHistory = paymentHistory.filter(
         p => p.mode !== currentPaymentMode
     );
 
-    // New entry
     paymentHistory.push({
         mode: currentPaymentMode,
         amount: amount
     });
 
+}
     // Remaining calculate
     const paid = paymentHistory.reduce(
         (t,p)=>t+p.amount,
