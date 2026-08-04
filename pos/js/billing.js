@@ -1226,7 +1226,7 @@ function loadSelectedCustomer(){
 
     }
 
-    renderCart();
+
 }
 function editSelectedCustomer(){
 
