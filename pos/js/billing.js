@@ -1551,10 +1551,22 @@ async function saveBill() {
         receivedAmount = 0;
         currentPaymentMode = "Cash";
         currentPaymentTotal = 0;
+// Customer Reset
+selectedCustomer = null;
 
-        localStorage.removeItem("cart");
+localStorage.removeItem("cart");
+localStorage.removeItem("selectedCustomer");
 
-        renderCart();
+document.getElementById("customerSearch").value = "";
+
+document.getElementById("customerActions")
+    .classList.add("hidden");
+
+document.getElementById("selectedCustomerBox")
+    .classList.add("hidden");
+
+renderCart();
+renderPaymentHistory();
 
         document.getElementById("cashScreen").style.display = "none";
         document.getElementById("paymentPanel").style.display = "none";
