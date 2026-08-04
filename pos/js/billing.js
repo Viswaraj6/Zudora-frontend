@@ -1252,8 +1252,6 @@ function openPayment(mode){
 
         let amount;
 
-let amount;
-
 const existingPayment =
     paymentHistory.find(p => p.mode === mode);
 
