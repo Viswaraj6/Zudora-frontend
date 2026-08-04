@@ -1501,53 +1501,69 @@ function editCashPayment(){
 }
 async function saveBill() {
 
-    const grandTotal = parseFloat(
-        document.getElementById("paymentGrandTotal").innerText
-    );
+    const bill = {
 
-    const billData = {
-        customer: selectedCustomer?._id || null,
+        customer: selectedCustomer || null,
+
         items: cart,
-        grandTotal: grandTotal,
-        payments: paymentHistory
+
+        payments: paymentHistory,
+
+        total: Number(document.getElementById("subTotal").innerText) || 0,
+
+        discount: 0,
+
+        tax: 0,
+
+        grandTotal: Number(document.getElementById("grandTotal").innerText) || 0
+
     };
 
     try {
 
-        const res = await fetch(BASE_URL + "/pos/bill", {
+        const res = await fetch(BASE_URL + "/pos/save-bill", {
+
             method: "POST",
+
             headers: {
                 "Content-Type": "application/json"
             },
-            body: JSON.stringify(billData)
+
+            body: JSON.stringify(bill)
+
         });
 
         const data = await res.json();
 
-        if (!res.ok) {
-            alert(data.message || "Unable to Save Bill");
+        if (!data.success) {
+
+            alert("Bill Save Failed");
             return;
+
         }
 
-        alert("Bill Saved Successfully");
-
-        // Print
-        // window.open("print.html?id=" + data.bill._id, "_blank");
+        alert("Bill Saved : " + data.billNo);
 
         // Reset
+        cart = [];
         paymentHistory = [];
         remainingAmount = 0;
-        cart = [];
+        receivedAmount = 0;
+        currentPaymentMode = "Cash";
+        currentPaymentTotal = 0;
+
         localStorage.removeItem("cart");
 
         renderCart();
 
+        document.getElementById("cashScreen").style.display = "none";
         document.getElementById("paymentPanel").style.display = "none";
         document.getElementById("cartPanel").style.display = "flex";
 
     } catch (err) {
 
         console.error(err);
+
         alert("Server Error");
 
     }
