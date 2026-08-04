@@ -882,6 +882,11 @@ function selectCustomer(customer){
 
     selectedCustomer = customer;
 
+    localStorage.setItem(
+        "selectedCustomer",
+        JSON.stringify(customer)
+    );
+
     document.getElementById("customerSearch").value =
         `${customer.name} (${customer.mobile})`;
 
@@ -893,6 +898,7 @@ function selectCustomer(customer){
         .getElementById("customerDropdown")
         .classList.add("hidden");
 
+    renderCart();
 }
 function openCheckout(){
 
