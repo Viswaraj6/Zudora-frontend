@@ -1499,3 +1499,57 @@ function editCashPayment(){
     calculateCash();
 
 }
+async function saveBill() {
+
+    const grandTotal = parseFloat(
+        document.getElementById("paymentGrandTotal").innerText
+    );
+
+    const billData = {
+        customer: selectedCustomer?._id || null,
+        items: cart,
+        grandTotal: grandTotal,
+        payments: paymentHistory
+    };
+
+    try {
+
+        const res = await fetch(BASE_URL + "/pos/bill", {
+            method: "POST",
+            headers: {
+                "Content-Type": "application/json"
+            },
+            body: JSON.stringify(billData)
+        });
+
+        const data = await res.json();
+
+        if (!res.ok) {
+            alert(data.message || "Unable to Save Bill");
+            return;
+        }
+
+        alert("Bill Saved Successfully");
+
+        // Print
+        // window.open("print.html?id=" + data.bill._id, "_blank");
+
+        // Reset
+        paymentHistory = [];
+        remainingAmount = 0;
+        cart = [];
+        localStorage.removeItem("cart");
+
+        renderCart();
+
+        document.getElementById("paymentPanel").style.display = "none";
+        document.getElementById("cartPanel").style.display = "flex";
+
+    } catch (err) {
+
+        console.error(err);
+        alert("Server Error");
+
+    }
+
+}
