@@ -1257,26 +1257,30 @@ const existingPayment =
 
 if (existingPayment) {
 
-    // Already paid -> show previous value
     amount = existingPayment.amount;
+
+    // IMPORTANT
+    currentPaymentTotal =
+        existingPayment.amount + remainingAmount;
 
 } else if (remainingAmount > 0) {
 
-    // New payment mode -> show remaining
     amount = remainingAmount;
+
+    currentPaymentTotal = remainingAmount;
 
 } else {
 
-    // First payment
     amount = parseFloat(
         document.getElementById("paymentGrandTotal").innerText
     );
 
+    currentPaymentTotal = amount;
+
 }
 
-currentPaymentTotal = amount;
 document.getElementById("cashReceived").value = amount;
-
+        
         generateQuickAmounts(amount);
 
         calculateCash();
