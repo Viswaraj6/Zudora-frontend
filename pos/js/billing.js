@@ -1555,7 +1555,13 @@ currentPaymentTotal = 0;
 
 // Customer Reset
 selectedCustomer = null;
+// Clear Customer Card
+document.getElementById("selectedCustomerName").innerText = "";
+document.getElementById("selectedCustomerMobile").innerText = "";
 
+const box = document.getElementById("selectedCustomerBox");
+box.classList.remove("show");
+box.classList.add("hidden");
 // Storage
 localStorage.removeItem("cart");
 localStorage.removeItem("selectedCustomer");
