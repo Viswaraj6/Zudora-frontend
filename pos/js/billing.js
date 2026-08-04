@@ -1167,7 +1167,25 @@ function loadSelectedCustomer(){
         localStorage.getItem("selectedCustomer")
     );
 
-    if(!customer) return;
+    // Customer இல்லை
+    if(!customer){
+
+        selectedCustomer = null;
+
+        document.getElementById("customerSearch").value = "";
+
+        document
+            .getElementById("customerActions")
+            .classList.add("hidden");
+
+        const box =
+            document.getElementById("selectedCustomerBox");
+
+        box.classList.remove("show");
+        box.classList.add("hidden");
+
+        return;
+    }
 
     selectedCustomer = customer;
 
@@ -1186,19 +1204,22 @@ function loadSelectedCustomer(){
     document.getElementById("selectedCustomerMobile").innerText =
         customer.mobile;
 
-   const box = document.getElementById("selectedCustomerBox");
+    const box =
+        document.getElementById("selectedCustomerBox");
 
-if (window.innerWidth <= 800) {
+    if(window.innerWidth <= 800){
 
-    box.classList.remove("hidden");
-    box.classList.add("show");
-if (window.innerWidth <= 800) {
-    document.querySelector(".customer-btn").style.display = "none";
-}
-} else {
+        box.classList.remove("hidden");
+        box.classList.add("show");
 
-    box.classList.add("hidden");
-}
+        document.querySelector(".customer-btn").style.display = "none";
+
+    }else{
+
+        box.classList.add("hidden");
+
+    }
+
     renderCart();
 }
 function editSelectedCustomer(){
