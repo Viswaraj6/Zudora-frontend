@@ -1567,6 +1567,8 @@ document.getElementById("selectedCustomerBox")
 
 renderCart();
 renderPaymentHistory();
+updateGoCartBar();
+resetCustomerUI();
 
         document.getElementById("cashScreen").style.display = "none";
         document.getElementById("paymentPanel").style.display = "none";
