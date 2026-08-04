@@ -19,7 +19,7 @@ let isEditMode = false;
 
 window.onload = () => {
 
-    loadProducts();
+   await loadProducts();
 
     const barcodeInput =
         document.getElementById("barcodeInput");
