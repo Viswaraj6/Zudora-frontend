@@ -1544,19 +1544,23 @@ async function saveBill() {
 
         alert("Bill Saved : " + data.billNo);
 
-        // Reset
-        cart = [];
-        paymentHistory = [];
-        remainingAmount = 0;
-        receivedAmount = 0;
-        currentPaymentMode = "Cash";
-        currentPaymentTotal = 0;
+       // Reset
+cart = [];
+paymentHistory = [];
+remainingAmount = 0;
+receivedAmount = 0;
+cashPaid = 0;
+currentPaymentMode = "Cash";
+currentPaymentTotal = 0;
+
 // Customer Reset
 selectedCustomer = null;
 
+// Storage
 localStorage.removeItem("cart");
 localStorage.removeItem("selectedCustomer");
 
+// Clear Customer UI
 document.getElementById("customerSearch").value = "";
 
 document.getElementById("customerActions")
@@ -1565,15 +1569,30 @@ document.getElementById("customerActions")
 document.getElementById("selectedCustomerBox")
     .classList.add("hidden");
 
-renderCart();
+// Clear Payment UI
+document.getElementById("remainingLabel").innerHTML = "";
+document.getElementById("cashMessage").innerHTML = "";
+document.getElementById("cashReceived").value = "";
+document.getElementById("quickAmountButtons").innerHTML = "";
+
+// Reset Payment Buttons
 renderPaymentHistory();
-updateGoCartBar();
 resetCustomerUI();
 
-        document.getElementById("cashScreen").style.display = "none";
-        document.getElementById("paymentPanel").style.display = "none";
-        document.getElementById("cartPanel").style.display = "flex";
+// Refresh Cart
+renderCart();
+updateGoCartBar();
 
+// Screen
+document.getElementById("cashScreen").style.display = "none";
+document.getElementById("paymentPanel").style.display = "none";
+document.getElementById("cartPanel").style.display = "flex";
+
+// Header
+document.querySelector(".header").style.display = "flex";
+
+// Focus
+document.getElementById("barcodeInput").focus();
     } catch (err) {
 
         console.error(err);
