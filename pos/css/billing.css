@@ -86,6 +86,39 @@ html{
     font-weight:700;
 
 }
+#upiBtn{
+    position:relative;
+
+    display:flex;
+    justify-content:center;
+    align-items:center;
+
+    height:46px;
+}
+#upisBtn .pay-value{
+
+    position:absolute;
+
+    right:20px;
+
+    font-weight:700;
+
+    font-size:18px;
+ 
+}
+
+#upiBtn .pay-icon{
+
+    font-weight:600;
+
+}
+#upiBtn small{
+
+    font-size:18px;
+
+    font-weight:700;
+
+}
 .payment-screen{
 
     display:none;
