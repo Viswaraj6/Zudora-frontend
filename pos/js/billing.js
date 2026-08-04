@@ -17,7 +17,7 @@ let scanLock = false;
 let selectedCustomer = null;
 let isEditMode = false;
 
-window.onload = () => {
+window.onload = async() => {
 
    await loadProducts();
 
