@@ -1265,7 +1265,14 @@ if (cart.length > 0) {
 function openPayment(mode){
 
     currentPaymentMode = mode;
+  
+   if(window.innerWidth > 800){
 
+    showDesktopPayment(mode);
+
+    return;
+
+}
     if(window.innerWidth <= 800){
 
         document.getElementById("paymentPanel").style.display = "none";
