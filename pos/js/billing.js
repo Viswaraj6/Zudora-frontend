@@ -1265,54 +1265,56 @@ if (cart.length > 0) {
 function openPayment(mode){
 
     currentPaymentMode = mode;
-   
+
+    document.getElementById("paymentTitle").innerText =
+        mode + " Payment";
+
+    document.querySelector(".payment-body h3").innerText =
+        mode + " Received";
+
+    let amount;
+
+    const existingPayment =
+        paymentHistory.find(p => p.mode === mode);
+
+    if(existingPayment){
+
+        amount = existingPayment.amount;
+
+        currentPaymentTotal =
+            existingPayment.amount + remainingAmount;
+
+    }else if(remainingAmount > 0){
+
+        amount = remainingAmount;
+
+        currentPaymentTotal = remainingAmount;
+
+    }else{
+
+        amount = parseFloat(
+            document.getElementById("paymentGrandTotal").innerText
+        );
+
+        currentPaymentTotal = amount;
+
+    }
+
+    document.getElementById("cashReceived").value = amount;
+
+    generateQuickAmounts(amount);
+
+    calculateCash();
+
+    // Mobile மட்டும் Payment Panel Hide
     if(window.innerWidth <= 800){
 
         document.getElementById("paymentPanel").style.display = "none";
-        document.getElementById("cashScreen").style.display = "flex";
-
-        document.getElementById("paymentTitle").innerText =
-            mode + " Payment";
-
-        document.querySelector(".payment-body h3").innerText =
-            mode + " Received";
-
-        let amount;
-
-const existingPayment =
-    paymentHistory.find(p => p.mode === mode);
-
-if (existingPayment) {
-
-    amount = existingPayment.amount;
-
-    // IMPORTANT
-    currentPaymentTotal =
-        existingPayment.amount + remainingAmount;
-
-} else if (remainingAmount > 0) {
-
-    amount = remainingAmount;
-
-    currentPaymentTotal = remainingAmount;
-
-} else {
-
-    amount = parseFloat(
-        document.getElementById("paymentGrandTotal").innerText
-    );
-
-    currentPaymentTotal = amount;
-
-}
-
-document.getElementById("cashReceived").value = amount;
-        
-        generateQuickAmounts(amount);
-
-        calculateCash();
 
     }
+
+    // Desktop + Mobile இரண்டுக்கும்
+    document.getElementById("cashScreen").style.display = "flex";
 
 }
 function closeCashScreen() {
