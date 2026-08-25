@@ -1317,11 +1317,15 @@ function openPayment(mode){
     document.getElementById("cashScreen").style.display = "flex";
 
 }
-function closeCashScreen() {
+function closeCashScreen(){
 
     document.getElementById("cashScreen").style.display = "none";
 
-    document.getElementById("paymentPanel").style.display = "block";
+    if(window.innerWidth <= 800){
+
+        document.getElementById("paymentPanel").style.display = "block";
+
+    }
 
 }
 function generateQuickAmounts(total){
